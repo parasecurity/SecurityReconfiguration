@@ -74,7 +74,7 @@ Setups for FPGA https://github.com/stnolting/neorv32-setups
 
 # Papers about Side Channel Attacks
 
-- [Survey of CPU Cache-Based Side-Channel Attacks: Systematic](Analysis, Security Models, and Countermeasures https://downloads.hindawi.com/journals/scn/2021/5559552.pdf)
+- [Survey of CPU Cache-Based Side-Channel Attacks: Systematic Analysis, Security Models, and Countermeasures] (https://downloads.hindawi.com/journals/scn/2021/5559552.pdf)
 
 - [SafeSpec: Banishing the Spectre of a Meltdown with Leakage-Free Speculation](https://arxiv.org/pdf/1806.05179.pdf)
 
@@ -87,3 +87,5 @@ Setups for FPGA https://github.com/stnolting/neorv32-setups
 - [Mastik : Implementations of 6 micro architectural side-channel attacks on x86 processors](https://github.com/0xADE1A1DE/Mastik)
 
 - [Code of Spectre v1,v2,v5 attacks on BOOM Processor](https://github.com/sabbaghm/sonicboom-attacks)
+
+- [DAWG: A Defense Against Cache Timing Attacks in Speculative Execution Processors](https://groups.csail.mit.edu/commit/papers/2018/kiriansky-micro18-dawg.pdf)
