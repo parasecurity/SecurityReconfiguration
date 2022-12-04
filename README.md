@@ -13,6 +13,7 @@ Exploring reconfiguration as a security mechanism for RISC-V processors
 
 - [CVA6’s Data cache: Structure and Behavior](https://arxiv.org/ftp/arxiv/papers/2202/2202.03749.pdf)
 
+- [Validating Side Channelmodels in RISC-V using Model-Based Testing](https://www.diva-portal.org/smash/get/diva2:1615024/FULLTEXT01.pdf)
 
 ## [Rocket Core](https://github.com/chipsalliance/rocket-chip)
 
