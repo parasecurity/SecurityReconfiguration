@@ -15,6 +15,8 @@ Exploring reconfiguration as a security mechanism for RISC-V processors
 
 - [Validating Side Channelmodels in RISC-V using Model-Based Testing](https://www.diva-portal.org/smash/get/diva2:1615024/FULLTEXT01.pdf)
 
+- [CCALK: (When) CVA6 Cache Associativity Leaks the Key](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjnwrqWssT8AhX2xwIHHcxOB0AQFnoECBQQAQ&url=https%3A%2F%2Fwww.mdpi.com%2F2079-9268%2F13%2F1%2F1%2Fpdf&usg=AOvVaw1c-uU25uKxvCuJ4r-4sqtk)
+
 ## [Rocket Core](https://github.com/chipsalliance/rocket-chip)
 
 - Implemented in Chisel
