@@ -2,7 +2,7 @@
 
 This folder contains implementations of a prime and probe attack on the CVA6 core developed by openhwgroup https://github.com/openhwgroup/cva6
 
-The code is based on the spectre attacks on the SonicBOOM CPU implemented by Sabbagh Majid , Fei Yunsi and Kaeli David https://github.com/sabbaghm/sonicboom-attacks
+The code is based on the Prime and Probe attack by Valentin Martinoli, Elouan Tourneur, Yannick Teglia and Régis Leveugle https://github.com/CCALK-work/CCALK
 
 `make allrv` builds the binaries in the binrv folder to run in Verilator.
 

@@ -77,7 +77,7 @@ Setups for FPGA https://github.com/stnolting/neorv32-setups
 
 # Papers about Side Channel Attacks
 
-- [Survey of CPU Cache-Based Side-Channel Attacks: Systematic Analysis, Security Models, and Countermeasures] (https://downloads.hindawi.com/journals/scn/2021/5559552.pdf)
+- [Survey of CPU Cache-Based Side-Channel Attacks: Systematic Analysis, Security Models, and Countermeasures](https://downloads.hindawi.com/journals/scn/2021/5559552.pdf)
 
 - [SafeSpec: Banishing the Spectre of a Meltdown with Leakage-Free Speculation](https://arxiv.org/pdf/1806.05179.pdf)
 

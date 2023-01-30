@@ -20,9 +20,9 @@ volatile unsigned miss[cache_size] = {0};	//array which holds the misses of each
 
 char* stringToBinary(char* s) {
     if(s == NULL) return 0; /* no input string */
-    size_t len = strlen(s);
+    size_t len = strlen(s);   
     char *binary = malloc(len*8 + 1); // each char is one byte (8 bits) and + 1 at the end for null terminator
-    binary[0] = '\0';
+    binary[0] = '\0';   
     for(size_t i = 0; i < len; ++i) {
         char ch = s[i];
         for(int j = 7; j >= 0; --j){
@@ -33,6 +33,8 @@ char* stringToBinary(char* s) {
             }
         }
     }
+    //printf("Address of len is 0x%x\n",&len);
+    //printf("Address of binary is 0x%x\n",&binary[0]);
     return binary;
 }
 
@@ -76,29 +78,45 @@ void trojan(char *key){
 	//trojan will evict specific cache lines according to the bits of the secret key
 	__uint128_t trojan_array[cache_size] __attribute__((aligned(128)));			//trojan_array starts at set 160
 	__uint128_t temp = 16;
+	int i , j ;
+	//printf("Address of i is 0x%x and of j is 0x%x\n",&i,&j);
 	//transform the key into bits
 	char* key_bits;
 	key_bits = stringToBinary(key);
+	//printf("Address of key_bits is 0x%x\n",&key_bits[0]);
 	size_t keylength = strlen(key_bits);
+	//printf("Address of keylength is 0x%x\n",&keylength);
 	//evict the sets starting from 0 if the bit is 1, otherwise dont evict
-	for ( int i = 0 ; i < keylength; i++){
-		if (key_bits[i] == '1'){
-			for ( int j = 0 ; j < cache_size ; j++){
-				//evict at position i+j (set 0 for first bit, set 1 for second bit, etc.)
-				if( j % 256 == 0 ){		//evict all ways of the same set
-					trojan_array[j+i+8] = 77;
-					temp = trojan_array[j+i+8];	//add 8 to get to the same set as the prime_array
+	if ( keylength > 240){
+		printf("Key is too big to encrypt");
+	}
+	else{
+		for ( j = 0 ; j < cache_size ; j++){
+			if( j % 256 == 0 ){		//evict all ways of the same set
+				for ( i = 0 ; i < keylength; i++){
+					//evict at position j+i (set 0 for first bit, set 1 for second bit, etc.)				
+					if (key_bits[i] == '1'){
+						if ( i > 87 ){		//we cant use the octave of cache sets 88 - 95, because 88 gets always evicted no matter what
+							trojan_array[j+i+8+8] = 150;	//we skip over the cache sets 88 - 95 by adding an extra 8 indexes
+							temp = trojan_array[j+i+8+8];	
+						}
+						else{
+							trojan_array[j+i+8] = 150;
+							temp = trojan_array[j+i+8];	//add 8 to get to the same set as the prime_array
+						}
+					}
 				}
 			}
 		}
-	}
+	}	
 }
 
 
 /*************VICTIM FUNCTION******************/
 
 void victim(){
-	char *key = "aa";
+	char *key = "SecretCVA6Key";
+	//printf("Address of key is 0x%x\n",&key[0]);
 	trojan(key);
 }
 
@@ -106,28 +124,38 @@ void victim(){
 /**************function to reconstruct the secret key***************/
 
 void reconstruct(int *bin_key){
-	int k = 0 ;	//specifies the character we are decoding
-	char *decoded_key = (char *)malloc((k+1)*sizeof(char));	//alocate memory for 1 character
+	int octave = 0 ;	//specifies the octave of bits we are decoding
+	char *decoded_key = (char *)malloc((octave+1)*sizeof(char));	//alocate memory for 1 character
 
-	//keep decoding untill we hit 8 bits of 0 which indicate end of string
+	//keep decoding untill we hit 8 bits of 0 which indicate end of string or we have read the entire bin_key array
+	//because set 88 is always evicted we have to ignore bits 88 to 95 which is the 11th octave
 	int end = 0 ;
 	int num, z, j;
-	while(end == 0){
+	while(end == 0 || octave == 31){		//we can read upto 31 characters because the bin_key is of size 256 and we skip the 11th octave
 		num = 0 ;
 		z = 0;
-		for (j = 7 ; j >= 0 ; j --){
-			num = num + (bin_key[(k*8)+j] << z);
-			z++;
+		if(octave>10){		//when we reach octave 11 we skip it
+			for (j = 7 ; j >= 0 ; j --){
+				num = num + (bin_key[((octave+1)*8)+j] << z);
+				z++;
+			}	
+		}
+		else{
+			for (j = 7 ; j >= 0 ; j --){
+				num = num + (bin_key[(octave*8)+j] << z);
+				z++;
+			}
 		}
 		if ( num != 0 ){
-			decoded_key[k] = num;
-			k++;
-			decoded_key = realloc(decoded_key,((k+1)*sizeof(char)));
+			decoded_key[octave] = num;
+			octave++;
+			decoded_key = realloc(decoded_key,((octave+1)*sizeof(char)));
 		}
 		else {
-			decoded_key[k] = '\0';
+			decoded_key[octave] = '\0';
 			end = 1;
-		}		
+		}	
+	
 	}
 
 	printf("Decoded key is %s\n",decoded_key);
@@ -145,8 +173,9 @@ void read_sets(){
 	for(i = 0 ; i < cache_size ; i++){
 		int way = i/256;
 		int set = i - (way*256);
+		//set = (set + 168) % 256;	//first element of prime array starts at set 168
 		if(miss[i] > 160){
-			//printf("Index %d, Cache way %d, Set %d got evicted %d times\n",i,way,set,miss[i]);
+			printf("Index %d, Cache way %d, Set %d got evicted %d times\n",i,way,set,miss[i]);
 			evicted_ways[set]++;
 			evictions++;
 		}
@@ -155,7 +184,7 @@ void read_sets(){
 
 	int total_sets_evicted = 0 ;
 	int set_evicted[256] = {0};	//array which specifies which sets are evicted and which not
-	//if a set got at least 6 of its 8 ways evicted then its an evicted set
+	//if a set got at least 4 of its 8 ways evicted then its an evicted set
 	for(i = 0 ; i < 256; i++){
 		if(evicted_ways[i] > 5){
 			printf("Set %d got %d evictions\n",i,evicted_ways[i]);
@@ -167,7 +196,7 @@ void read_sets(){
 	printf("Total evictions %d\n",evictions);
 	printf("Total sets evicted %d\n",total_sets_evicted);
 
-	//reconstruct(set_evicted);
+	reconstruct(set_evicted);
 }
 
 
@@ -181,6 +210,7 @@ int main(){
 	//uint64_t addr;
 
 	//prime array starts at set 168
+
 
 	for (i = 0 ; i < iterations ; i ++){
 		prime(prime_array);		//prime the cache

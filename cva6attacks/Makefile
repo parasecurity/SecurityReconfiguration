@@ -1,4 +1,5 @@
 # Makefile for cva6-attacks
+# Based on the makefile from SonicBOOM Spectre attacks by by Sabbagh Majid , Fei Yunsi and Kaeli David https://github.com/sabbaghm/sonicboom-attacks
 
 
 # Folders
@@ -29,7 +30,7 @@ DEPFLAGS=-MT $@ -MMD -MP -MF $(DEP)/$*.d
 RM=rm -rf
 
 # Programs to compile
-PROGRAMS=primeprobe
+PROGRAMS=primeprobe evictreload
 BINS=$(addprefix $(BIN)/,$(addsuffix .riscv,$(PROGRAMS)))
 DUMPS=$(addprefix $(DMP)/,$(addsuffix .dump,$(PROGRAMS)))
 
