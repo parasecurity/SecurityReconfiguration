@@ -9,14 +9,14 @@
 #define CACHE_LINE_SIZE 16
 #define cache_size (CACHE_SETS * CACHE_WAYS * CACHE_LINE_SIZE) / CACHE_LINE_SIZE
 
-#define iterations 200 	//number of times to run the attack
+#define iterations 200 	//number of times to run the prime and probe attack
 #define threshold 30	//threshold above which we have a cache miss
 	
 volatile unsigned miss[cache_size] = {0};	//array which holds the misses of each cache line
 
 
-/********helper function to convert string to bits**********/
 
+/********helper function to convert string to bits**********/
 
 char* stringToBinary(char* s) {
     if(s == NULL) return 0; /* no input string */
@@ -33,8 +33,6 @@ char* stringToBinary(char* s) {
             }
         }
     }
-    //printf("Address of len is 0x%x\n",&len);
-    //printf("Address of binary is 0x%x\n",&binary[0]);
     return binary;
 }
 
@@ -76,21 +74,19 @@ void probe(__uint128_t *array){
 
 void trojan(char *key){
 	//trojan will evict specific cache lines according to the bits of the secret key
-	__uint128_t trojan_array[cache_size] __attribute__((aligned(128)));			//trojan_array starts at set 160
+	__uint128_t trojan_array[cache_size] __attribute__((aligned(128)));
 	__uint128_t temp = 16;
 	int i , j ;
-	//printf("Address of i is 0x%x and of j is 0x%x\n",&i,&j);
 	//transform the key into bits
 	char* key_bits;
 	key_bits = stringToBinary(key);
-	//printf("Address of key_bits is 0x%x\n",&key_bits[0]);
 	size_t keylength = strlen(key_bits);
-	//printf("Address of keylength is 0x%x\n",&keylength);
-	//evict the sets starting from 0 if the bit is 1, otherwise dont evict
+	//we can encrypt a key of upto 240 bits because we skip 8 bits from sets 88-95 and we lose 8 bits because the prime array is 8 sets ahead of the trojan array	
 	if ( keylength > 240){
 		printf("Key is too big to encrypt");
 	}
 	else{
+		//evict the sets starting from 0 if the bit of the key is 1, otherwise dont evict
 		for ( j = 0 ; j < cache_size ; j++){
 			if( j % 256 == 0 ){		//evict all ways of the same set
 				for ( i = 0 ; i < keylength; i++){
@@ -115,8 +111,7 @@ void trojan(char *key){
 /*************VICTIM FUNCTION******************/
 
 void victim(){
-	char *key = "SecretCVA6Key";
-	//printf("Address of key is 0x%x\n",&key[0]);
+	char *key = "SecretKey";
 	trojan(key);
 }
 
@@ -136,7 +131,7 @@ void reconstruct(int *bin_key){
 		z = 0;
 		if(octave>10){		//when we reach octave 11 we skip it
 			for (j = 7 ; j >= 0 ; j --){
-				num = num + (bin_key[((octave+1)*8)+j] << z);
+				num = num + (bin_key[((octave+1)*8)+j] << z);	//calculate ascii code of the character
 				z++;
 			}	
 		}
@@ -146,7 +141,7 @@ void reconstruct(int *bin_key){
 				z++;
 			}
 		}
-		if ( num != 0 ){
+		if ( num != 0 ){	//check if we reached end of string
 			decoded_key[octave] = num;
 			octave++;
 			decoded_key = realloc(decoded_key,((octave+1)*sizeof(char)));
@@ -165,6 +160,7 @@ void reconstruct(int *bin_key){
 
 
 /***********function to read the evicted sets***************/
+
 void read_sets(){
 	int i = 0;
 	int evicted_ways[256] = {0};	//keep amount of way evictions in each set
@@ -173,9 +169,8 @@ void read_sets(){
 	for(i = 0 ; i < cache_size ; i++){
 		int way = i/256;
 		int set = i - (way*256);
-		//set = (set + 168) % 256;	//first element of prime array starts at set 168
-		if(miss[i] > 160){
-			printf("Index %d, Cache way %d, Set %d got evicted %d times\n",i,way,set,miss[i]);
+		if(miss[i] > 150){
+			//printf("Index %d, Cache way %d, Set %d got evicted %d times\n",i,way,set,miss[i]);
 			evicted_ways[set]++;
 			evictions++;
 		}
@@ -184,9 +179,9 @@ void read_sets(){
 
 	int total_sets_evicted = 0 ;
 	int set_evicted[256] = {0};	//array which specifies which sets are evicted and which not
-	//if a set got at least 4 of its 8 ways evicted then its an evicted set
+	//if a set got at least 7 of its 8 ways evicted then its an evicted set
 	for(i = 0 ; i < 256; i++){
-		if(evicted_ways[i] > 5){
+		if(evicted_ways[i] > 6){
 			printf("Set %d got %d evictions\n",i,evicted_ways[i]);
 			total_sets_evicted++;
 			set_evicted[i] = 1;
@@ -206,36 +201,14 @@ void read_sets(){
 
 int main(){
 	__uint128_t prime_array[cache_size] __attribute__((aligned(128))); //define array the size of the cache
-	int i = 0 ;
-	//uint64_t addr;
 
-	//prime array starts at set 168
-
-
-	for (i = 0 ; i < iterations ; i ++){
+	for (int i = 0 ; i < iterations ; i ++){
 		prime(prime_array);		//prime the cache
 		victim();
 		probe(prime_array);		//probe the cache
 	}
 
 	read_sets();
-
-	
-
-
-	/******reassembling the secret key*********/
-
-	//reconstruct(set_evicted);	//pass as argument the array which holds which sets were evicted
-
-	//printf("Address of i is 0x%x\n",&i);
-	//printf("Address of iterations is 0x%x\n",&iterations);
-	// printf("Address of cache_size is 0x%x\n",&cache_size);
-	// printf("Address of evicted_ways is 0x%x\n",&evicted_ways[0]);
-	// printf("Address of evictions is 0x%x\n",&evictions);
-	// printf("Address of way is 0x%x\n",&way);
-
-
-
 
 	return 0;
 
