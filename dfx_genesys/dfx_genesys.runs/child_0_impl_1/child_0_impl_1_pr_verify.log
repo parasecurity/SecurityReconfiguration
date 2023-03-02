@@ -1,0 +1,22 @@
+Command: pr_verify -full_check -initial /home/askyvalos/dfx_genesys/dfx_genesys.runs/impl_1/top_routed.dcp -additional /home/askyvalos/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top_routed.dcp -file child_0_impl_1_pr_verify.log
+Fri Feb 24 13:10:01 2023
+
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: /home/askyvalos/dfx_genesys/dfx_genesys.runs/impl_1/top_routed.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 6
+  Number of static tiles compared           = 510
+  Number of static sites compared           = 9
+  Number of static cells compared           = 9
+  Number of static routed nodes compared    = 213
+  Number of static routed pips compared     = 197
+
+DCP2: /home/askyvalos/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top_routed.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 6
+  Number of static tiles compared           = 510
+  Number of static sites compared           = 9
+  Number of static cells compared           = 9
+  Number of static routed nodes compared    = 213
+  Number of static routed pips compared     = 197
+INFO: [Vivado 12-3253] PR_VERIFY: check points /home/askyvalos/dfx_genesys/dfx_genesys.runs/impl_1/top_routed.dcp and /home/askyvalos/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top_routed.dcp are compatible
