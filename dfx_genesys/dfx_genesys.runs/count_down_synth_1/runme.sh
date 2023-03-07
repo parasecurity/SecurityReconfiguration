@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/askyvalos/Vivado/2022.2/ids_lite/ISE/bin/lin64:/home/askyvalos/Vivado/2022.2/bin
+  PATH=/home/alex/tools/Vitis/2022.2/bin:/home/alex/tools/Vivado/2022.2/ids_lite/ISE/bin/lin64:/home/alex/tools/Vivado/2022.2/bin
 else
-  PATH=/home/askyvalos/Vivado/2022.2/ids_lite/ISE/bin/lin64:/home/askyvalos/Vivado/2022.2/bin:$PATH
+  PATH=/home/alex/tools/Vitis/2022.2/bin:/home/alex/tools/Vivado/2022.2/ids_lite/ISE/bin/lin64:/home/alex/tools/Vivado/2022.2/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/askyvalos/dfx_genesys/dfx_genesys.runs/count_down_synth_1'
+HD_PWD='/home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/count_down_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

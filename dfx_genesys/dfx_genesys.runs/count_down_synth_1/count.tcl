@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/askyvalos/dfx_genesys/dfx_genesys.runs/count_down_synth_1/count.tcl"
+  variable script "/home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/count_down_synth_1/count.tcl"
   variable category "vivado_synth"
 }
 
@@ -77,17 +77,16 @@ create_project -in_memory -part xc7k325tffg900-2
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/askyvalos/dfx_genesys/dfx_genesys.cache/wt [current_project]
-set_property parent.project_path /home/askyvalos/dfx_genesys/dfx_genesys.xpr [current_project]
+set_property webtalk.parent_dir /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.cache/wt [current_project]
+set_property parent.project_path /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/askyvalos/.Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:genesys2:part0:1.1 [current_project]
-set_property ip_output_repo /home/askyvalos/dfx_genesys/dfx_genesys.cache/ip [current_project]
+set_property ip_output_repo /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/askyvalos/files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/count_down/count_down.v
+read_verilog -library xil_defaultlib /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/count_down/imports/count_down/count_down.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

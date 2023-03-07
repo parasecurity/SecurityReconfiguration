@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Feb 23 16:16:00 2023
-| Host         : tom-tom running 64-bit Ubuntu 20.04.5 LTS
+| Date         : Fri Mar  3 17:46:44 2023
+| Host         : alex running 64-bit Ubuntu 22.04.2 LTS
 | Command      : report_utilization -file count_utilization_synth.rpt -pb count_utilization_synth.pb
 | Design       : count
 | Device       : xc7k325tffg900-2

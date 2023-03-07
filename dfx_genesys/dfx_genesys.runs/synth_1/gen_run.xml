@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1677236822" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
-  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1678110436" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
@@ -8,18 +7,38 @@
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="top.vds"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/clocks.v">
+    <File Path="$PSRCDIR/sources_1/imports/hdl/top/clocks.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/clocks.v"/>
+        <Attr Name="ImportTime" Val="1586872406"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/top.v">
+    <File Path="$PSRCDIR/sources_1/imports/top/debouncer.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/dfxc_7s/Sources/hdl/top/debouncer.vhd"/>
+        <Attr Name="ImportTime" Val="1587038870"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ftop.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/top/top.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/top.v"/>
+        <Attr Name="ImportTime" Val="1586872406"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -33,20 +52,22 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../files/digilent-xdc-master/Genesys-2-Master.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Genesys-2-Master.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/digilent-xdc-master/Genesys-2-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1669143946"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/constrs_1/new/pblock_dfx_genesys.xdc">
+    <File Path="$PSRCDIR/constrs_1/new/pblock.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pblock_dfx_genesys.xdc"/>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pblock.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -68,4 +89,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ila_vs_count"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_quad_spi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="jtag_axi_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dfx_controller_0"/>
 </GenRun>

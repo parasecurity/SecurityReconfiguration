@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/askyvalos/dfx_genesys/dfx_genesys.runs/impl_1/top.tcl"
+  variable script "/home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,13 +123,13 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 6
-  set_param xicom.use_bs_reader 1
+  set_param chipscope.maxJobs 4
   open_checkpoint top_routed.dcp
-  set_property webtalk.parent_dir /home/askyvalos/dfx_genesys/dfx_genesys.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.cache/wt [current_project]
 set_property TOP top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi top.mmi }
   catch { write_mem_info -force -cell inst_count inst_count_count_down_partial.mmi }
 OPTRACE "write_bitstream setup" END { }

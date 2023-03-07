@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/askyvalos/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top.tcl"
+  variable script "/home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -123,27 +123,27 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 6
-  set_param xicom.use_bs_reader 1
-  pr_verify -full_check -initial /home/askyvalos/dfx_genesys/dfx_genesys.runs/impl_1/top_routed.dcp -additional /home/askyvalos/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top_routed.dcp -file child_0_impl_1_pr_verify.log
+  set_param chipscope.maxJobs 4
+  pr_verify -full_check -initial /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/impl_1/top_routed.dcp -additional /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/child_0_impl_1/top_routed.dcp -file child_0_impl_1_pr_verify.log
   open_checkpoint top_routed.dcp
-  set_property webtalk.parent_dir /home/askyvalos/dfx_genesys/dfx_genesys.cache/wt [current_project]
+  set_property webtalk.parent_dir /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.cache/wt [current_project]
 set_property TOP top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi top.mmi }
-  catch { write_mem_info -force -cell inst_count inst_count_count_up_partial.mmi }
+  catch { write_mem_info -force -cell inst_count inst_count_count_half_partial.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
   write_bitstream -force -no_partial_bitfile top.bit 
-  write_bitstream -force -cell inst_count inst_count_count_up_partial.bit 
+  write_bitstream -force -cell inst_count inst_count_count_half_partial.bit 
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
 OPTRACE "read constraints: write_bitstream_post" END { }
   catch {write_debug_probes -no_partial_ltxfile -quiet -force top}
   catch {file copy -force top.ltx debug_nets.ltx}
-  catch {write_debug_probes -quiet -force -cell inst_count -file inst_count_count_up_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell inst_count -file inst_count_count_half_partial.ltx}
   close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {

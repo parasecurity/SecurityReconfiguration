@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Feb 24 13:07:04 2023
-# Process ID: 1875683
-# Current directory: /home/askyvalos/dfx_genesys/dfx_genesys.runs/synth_1
+# Start of session at: Mon Mar  6 15:47:17 2023
+# Process ID: 53573
+# Current directory: /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: /home/askyvalos/dfx_genesys/dfx_genesys.runs/synth_1/top.vds
-# Journal file: /home/askyvalos/dfx_genesys/dfx_genesys.runs/synth_1/vivado.jou
-# Running On: tom-tom, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 135019 MB
+# Log file: /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/synth_1/top.vds
+# Journal file: /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/synth_1/vivado.jou
+# Running On: alex, OS: Linux, CPU Frequency: 2060.718 MHz, CPU Physical cores: 16, Host memory: 15975 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../../dfx_genesys.gen/sources_1/ip/axi_quad_spi_0/sim/axi_quad_spi_0.vhd" \
+
+nosort

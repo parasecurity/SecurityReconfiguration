@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/askyvalos/dfx_genesys/dfx_genesys.runs/synth_1/top.tcl"
+  variable script "/home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,32 +70,54 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 6
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7k325tffg900-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/askyvalos/dfx_genesys/dfx_genesys.cache/wt [current_project]
-set_property parent.project_path /home/askyvalos/dfx_genesys/dfx_genesys.xpr [current_project]
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+set_property webtalk.parent_dir /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.cache/wt [current_project]
+set_property parent.project_path /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {/home/askyvalos/.Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:genesys2:part0:1.1 [current_project]
-set_property ip_output_repo /home/askyvalos/dfx_genesys/dfx_genesys.cache/ip [current_project]
+set_property ip_output_repo /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files -quiet /home/askyvalos/dfx_genesys/dfx_genesys.runs/count_down_synth_1/count.dcp
-set_property used_in_implementation false [get_files /home/askyvalos/dfx_genesys/dfx_genesys.runs/count_down_synth_1/count.dcp]
+add_files -quiet /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/count_up_synth_1/count.dcp
+set_property used_in_implementation false [get_files /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.runs/count_up_synth_1/count.dcp]
 read_xdc hd_reconfig.xdc
 set_property used_in_implementation false [get_files hd_reconfig.xdc]
-read_verilog -library xil_defaultlib {
-  /home/askyvalos/files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/clocks.v
-  /home/askyvalos/files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/top.v
+read_verilog -library xil_defaultlib /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/imports/hdl/top/clocks.v
+read_vhdl -library xil_defaultlib {
+  /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/imports/top/debouncer.vhd
+  /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/new/ftop.vhd
 }
+read_ip -quiet /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/ip/dfx_controller_0/dfx_controller_0.xci
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/dfx_controller_0/dfx_controller_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/dfx_controller_0/dfx_controller_0_ooc.xdc]
+
+read_ip -quiet /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0.xci
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0_clocks.xdc]
+
+read_ip -quiet /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/ip/jtag_axi_0/jtag_axi_0.xci
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/jtag_axi_0/constraints/jtag_axi.xdc]
+set_property used_in_synthesis false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/jtag_axi_0/constraints/jtag_axi_0_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/jtag_axi_0/constraints/jtag_axi_0_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/jtag_axi_0/jtag_axi_0_ooc.xdc]
+
+read_ip -quiet /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/sources_1/ip/ila_vs_count/ila_vs_count.xci
+set_property used_in_synthesis false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/ila_vs_count/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/ila_vs_count/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/ila_vs_count/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/ila_vs_count/ila_vs_count_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -105,15 +127,15 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/askyvalos/files/digilent-xdc-master/Genesys-2-Master.xdc
-set_property used_in_implementation false [get_files /home/askyvalos/files/digilent-xdc-master/Genesys-2-Master.xdc]
+read_xdc /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/constrs_1/imports/digilent-xdc-master/Genesys-2-Master.xdc
+set_property used_in_implementation false [get_files /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/constrs_1/imports/digilent-xdc-master/Genesys-2-Master.xdc]
 
-read_xdc /home/askyvalos/dfx_genesys/dfx_genesys.srcs/constrs_1/new/pblock_dfx_genesys.xdc
-set_property used_in_implementation false [get_files /home/askyvalos/dfx_genesys/dfx_genesys.srcs/constrs_1/new/pblock_dfx_genesys.xdc]
+read_xdc /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/constrs_1/new/pblock.xdc
+set_property used_in_implementation false [get_files /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/constrs_1/new/pblock.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/askyvalos/dfx_genesys/dfx_genesys.srcs/utils_1/imports/synth_1/top.dcp
+read_checkpoint -auto_incremental -incremental /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.srcs/utils_1/imports/synth_1/top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="/home/askyvalos/dfx_genesys/dfx_genesys.xpr">
+<Project Version="7" Minor="61" Path="/home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="0a341b3ea26f4e348b07e62c883ff526"/>
+    <Option Name="Id" Val="6727a9be92d242b9aba325f9c8c55d88"/>
     <Option Name="Part" Val="xc7k325tffg900-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -43,7 +43,6 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="BoardPart" Val="digilentinc.com:genesys2:part0:1.1"/>
-    <Option Name="BoardPartRepoPaths" Val="$PPRDIR/../.Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -67,13 +66,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="0"/>
-    <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="9"/>
+    <Option Name="WTModelSimExportSim" Val="9"/>
+    <Option Name="WTQuestaExportSim" Val="9"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="0"/>
-    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="9"/>
+    <Option Name="WTRivieraExportSim" Val="9"/>
+    <Option Name="WTActivehdlExportSim" Val="9"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -91,23 +90,34 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/clocks.v">
+      <File Path="$PSRCDIR/sources_1/imports/hdl/top/clocks.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/clocks.v"/>
+          <Attr Name="ImportTime" Val="1586872406"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/top.v">
+      <File Path="$PSRCDIR/sources_1/imports/top/debouncer.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/dfxc_7s/Sources/hdl/top/debouncer.vhd"/>
+          <Attr Name="ImportTime" Val="1587038870"/>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <File Path="$PSRCDIR/sources_1/new/ftop.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/hdl/top/top.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/top/top.v"/>
+          <Attr Name="ImportTime" Val="1586872406"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -121,20 +131,22 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../files/digilent-xdc-master/Genesys-2-Master.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Genesys-2-Master.xdc">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Downloads/digilent-xdc-master/Genesys-2-Master.xdc"/>
+          <Attr Name="ImportTime" Val="1669143946"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/constrs_1/new/pblock_dfx_genesys.xdc">
+      <File Path="$PSRCDIR/constrs_1/new/pblock.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pblock_dfx_genesys.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/pblock.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -169,9 +181,11 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="count_down" Type="BlockSrcs" RelSrcDir="$PSRCDIR/count_down" RelGenDir="$PGENDIR/count_down">
-      <File Path="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/count_down/count_down.v">
+    <FileSet Name="count_up" Type="BlockSrcs" RelSrcDir="$PSRCDIR/count" RelGenDir="$PGENDIR/count">
+      <File Path="$PSRCDIR/count/imports/count_up/count_up.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/count_up/count_up.v"/>
+          <Attr Name="ImportTime" Val="1586872132"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -179,13 +193,15 @@
       </File>
       <Config>
         <Option Name="TopModule" Val="count"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/count_down/count_down.v"/>
+        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/hdl/count_up/count_up.v"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="count_up" Type="BlockSrcs" RelSrcDir="$PSRCDIR/count_up" RelGenDir="$PGENDIR/count_up">
-      <File Path="$PPRDIR/../files/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/count_up/count_up.v">
+    <FileSet Name="count_down" Type="BlockSrcs" RelSrcDir="$PSRCDIR/count_down" RelGenDir="$PGENDIR/count_down">
+      <File Path="$PSRCDIR/count_down/imports/count_down/count_down.v">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../diplomatiki/Reconf/ug947-vivado-partial-reconfiguration-tutorial/led_shift_count_7s/Sources/hdl/count_down/count_down.v"/>
+          <Attr Name="ImportTime" Val="1586872132"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -194,6 +210,72 @@
       <Config>
         <Option Name="TopModule" Val="count"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="dfx_controller_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dfx_controller_0" RelGenDir="$PGENDIR/dfx_controller_0">
+      <File Path="$PSRCDIR/sources_1/ip/dfx_controller_0/dfx_controller_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="dfx_controller_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="axi_quad_spi_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/axi_quad_spi_0" RelGenDir="$PGENDIR/axi_quad_spi_0">
+      <File Path="$PSRCDIR/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="axi_quad_spi_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="count_half" Type="BlockSrcs" RelSrcDir="$PSRCDIR/count_half" RelGenDir="$PGENDIR/count_half">
+      <File Path="$PSRCDIR/count_half/imports/count_half/count_half.v">
+        <FileInfo RelPath="count_half.v">
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="count"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="jtag_axi_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/jtag_axi_0" RelGenDir="$PGENDIR/jtag_axi_0">
+      <File Path="$PSRCDIR/sources_1/ip/jtag_axi_0/jtag_axi_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="jtag_axi_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ila_vs_count" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_vs_count" RelGenDir="$PGENDIR/ila_vs_count">
+      <File Path="$PSRCDIR/sources_1/ip/ila_vs_count/ila_vs_count.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="ila_vs_count"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -230,6 +312,16 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="count_up_synth_1" Type="Ft3:Synth" SrcSet="count_up" Part="xc7k325tffg900-2" ConstrsSet="count_up" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/count_up_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="count_down_synth_1" Type="Ft3:Synth" SrcSet="count_down" Part="xc7k325tffg900-2" ConstrsSet="count_down" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/count_down_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_down_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_down_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
@@ -240,7 +332,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="count_up_synth_1" Type="Ft3:Synth" SrcSet="count_up" Part="xc7k325tffg900-2" ConstrsSet="count_up" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/count_up_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_up_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_up_synth_1">
+    <Run Id="dfx_controller_0_synth_1" Type="Ft3:Synth" SrcSet="dfx_controller_0" Part="xc7k325tffg900-2" ConstrsSet="dfx_controller_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dfx_controller_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dfx_controller_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dfx_controller_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
@@ -250,7 +342,47 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" PRConfiguration="config_down" DFXMode="STANDARD" ConfigurationChanged="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="axi_quad_spi_0_synth_1" Type="Ft3:Synth" SrcSet="axi_quad_spi_0" Part="xc7k325tffg900-2" ConstrsSet="axi_quad_spi_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/axi_quad_spi_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/axi_quad_spi_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/axi_quad_spi_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="count_half_synth_1" Type="Ft3:Synth" SrcSet="count_half" Part="xc7k325tffg900-2" ConstrsSet="count_half" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/count_half_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_half_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_half_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="jtag_axi_0_synth_1" Type="Ft3:Synth" SrcSet="jtag_axi_0" Part="xc7k325tffg900-2" ConstrsSet="jtag_axi_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/jtag_axi_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/jtag_axi_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/jtag_axi_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="ila_vs_count_synth_1" Type="Ft3:Synth" SrcSet="ila_vs_count" Part="xc7k325tffg900-2" ConstrsSet="ila_vs_count" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ila_vs_count_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ila_vs_count_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ila_vs_count_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" PRConfiguration="count_down" DFXMode="STANDARD" ConfigurationChanged="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -264,6 +396,23 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="count_up_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="count_up" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="count_up_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_up_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -285,7 +434,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="count_up_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="count_up" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="count_up_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_up_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_up_impl_1">
+    <Run Id="dfx_controller_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="dfx_controller_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dfx_controller_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dfx_controller_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dfx_controller_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -302,9 +451,99 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="child_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_0_impl_1" SynthRun="impl_1" IncludeInArchive="true" IsChild="false" PRConfiguration="config_up" DFXMode="STANDARD" ConfigurationChanged="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/child_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/child_0_impl_1">
+    <Run Id="axi_quad_spi_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="axi_quad_spi_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="axi_quad_spi_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/axi_quad_spi_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/axi_quad_spi_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="count_half_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="count_half" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="count_half_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/count_half_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/count_half_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="jtag_axi_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="jtag_axi_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="jtag_axi_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/jtag_axi_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/jtag_axi_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="ila_vs_count_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="ila_vs_count" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ila_vs_count_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/ila_vs_count_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/ila_vs_count_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="child_0_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_0_impl_1" SynthRun="impl_1" IncludeInArchive="true" IsChild="false" PRConfiguration="count_half" DFXMode="STANDARD" ConfigurationChanged="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/child_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/child_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="child_1_impl_1" Type="Ft2:EntireDesign" Part="xc7k325tffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_1_impl_1" SynthRun="impl_1" IncludeInArchive="true" IsChild="false" PRConfiguration="count_up" DFXMode="STANDARD" ConfigurationChanged="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/child_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/child_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -326,16 +565,20 @@
   </Board>
   <PRFlow Version="1" Minor="0">
     <PartitionDefs>
-      <PartitionDef Name="counter" DefaultRM="count_down" ModuleName="count" LibraryName="xil_defaultlib" Type="NONE">
+      <PartitionDef Name="counter" DefaultRM="count_up" ModuleName="count" LibraryName="xil_defaultlib" Type="NONE">
         <ReconfigModule Name="count_down" Top="count" SrcSet="count_down" SynthRun="count_down_synth_1" ImplRun="count_down_impl_1"/>
+        <ReconfigModule Name="count_half" Top="count" SrcSet="count_half" SynthRun="count_half_synth_1" ImplRun="count_half_impl_1"/>
         <ReconfigModule Name="count_up" Top="count" SrcSet="count_up" SynthRun="count_up_synth_1" ImplRun="count_up_impl_1"/>
       </PartitionDef>
     </PartitionDefs>
     <PRConfigurations>
-      <PRConfiguration Name="config_down" Active="true">
+      <PRConfiguration Name="count_down">
         <PartitionInstMap PartitionInst="inst_count" RM="count_down"/>
       </PRConfiguration>
-      <PRConfiguration Name="config_up">
+      <PRConfiguration Name="count_half">
+        <PartitionInstMap PartitionInst="inst_count" RM="count_half"/>
+      </PRConfiguration>
+      <PRConfiguration Name="count_up" Active="true">
         <PartitionInstMap PartitionInst="inst_count" RM="count_up"/>
       </PRConfiguration>
     </PRConfigurations>
