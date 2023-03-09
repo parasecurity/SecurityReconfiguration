@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Mon Mar  6 13:14:54 2023
+-- Date        : Thu Mar  9 12:06:44 2023
 -- Host        : alex running 64-bit Ubuntu 22.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/axi_quad_spi_0/axi_quad_spi_0_stub.vhdl
@@ -17,7 +17,6 @@ entity axi_quad_spi_0 is
     ext_spi_clk : in STD_LOGIC;
     s_axi4_aclk : in STD_LOGIC;
     s_axi4_aresetn : in STD_LOGIC;
-    s_axi4_awid : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi4_awaddr : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s_axi4_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi4_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -32,11 +31,9 @@ entity axi_quad_spi_0 is
     s_axi4_wlast : in STD_LOGIC;
     s_axi4_wvalid : in STD_LOGIC;
     s_axi4_wready : out STD_LOGIC;
-    s_axi4_bid : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi4_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi4_bvalid : out STD_LOGIC;
     s_axi4_bready : in STD_LOGIC;
-    s_axi4_arid : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi4_araddr : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s_axi4_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi4_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -46,7 +43,6 @@ entity axi_quad_spi_0 is
     s_axi4_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi4_arvalid : in STD_LOGIC;
     s_axi4_arready : out STD_LOGIC;
-    s_axi4_rid : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi4_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi4_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi4_rlast : out STD_LOGIC;
@@ -73,7 +69,7 @@ architecture stub of axi_quad_spi_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "ext_spi_clk,s_axi4_aclk,s_axi4_aresetn,s_axi4_awid[3:0],s_axi4_awaddr[23:0],s_axi4_awlen[7:0],s_axi4_awsize[2:0],s_axi4_awburst[1:0],s_axi4_awlock,s_axi4_awcache[3:0],s_axi4_awprot[2:0],s_axi4_awvalid,s_axi4_awready,s_axi4_wdata[31:0],s_axi4_wstrb[3:0],s_axi4_wlast,s_axi4_wvalid,s_axi4_wready,s_axi4_bid[3:0],s_axi4_bresp[1:0],s_axi4_bvalid,s_axi4_bready,s_axi4_arid[3:0],s_axi4_araddr[23:0],s_axi4_arlen[7:0],s_axi4_arsize[2:0],s_axi4_arburst[1:0],s_axi4_arlock,s_axi4_arcache[3:0],s_axi4_arprot[2:0],s_axi4_arvalid,s_axi4_arready,s_axi4_rid[3:0],s_axi4_rdata[31:0],s_axi4_rresp[1:0],s_axi4_rlast,s_axi4_rvalid,s_axi4_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt";
+attribute black_box_pad_pin of stub : architecture is "ext_spi_clk,s_axi4_aclk,s_axi4_aresetn,s_axi4_awaddr[23:0],s_axi4_awlen[7:0],s_axi4_awsize[2:0],s_axi4_awburst[1:0],s_axi4_awlock,s_axi4_awcache[3:0],s_axi4_awprot[2:0],s_axi4_awvalid,s_axi4_awready,s_axi4_wdata[31:0],s_axi4_wstrb[3:0],s_axi4_wlast,s_axi4_wvalid,s_axi4_wready,s_axi4_bresp[1:0],s_axi4_bvalid,s_axi4_bready,s_axi4_araddr[23:0],s_axi4_arlen[7:0],s_axi4_arsize[2:0],s_axi4_arburst[1:0],s_axi4_arlock,s_axi4_arcache[3:0],s_axi4_arprot[2:0],s_axi4_arvalid,s_axi4_arready,s_axi4_rdata[31:0],s_axi4_rresp[1:0],s_axi4_rlast,s_axi4_rvalid,s_axi4_rready,io0_i,io0_o,io0_t,io1_i,io1_o,io1_t,sck_i,sck_o,sck_t,ss_i[0:0],ss_o[0:0],ss_t,ip2intc_irpt";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "axi_quad_spi,Vivado 2022.2";
 begin

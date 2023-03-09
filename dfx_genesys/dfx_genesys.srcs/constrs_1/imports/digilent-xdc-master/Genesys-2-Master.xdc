@@ -13,7 +13,7 @@ set icap_clock       [get_clocks -of_objects [get_ports ICAPE2_inst/CLK]]
 ## Buttons
 set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS12 } [get_ports { GPIO_SW_C }]; #IO_25_17 Sch=btnc
 set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS12 } [get_ports { GPIO_SW_S }]; #IO_0_15 Sch=btnd
-#set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS12 } [get_ports { btnl }]; #IO_L6P_T0_15 Sch=btnl
+set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS12 } [get_ports { GPIO_SW_W }]; #IO_L6P_T0_15 Sch=btnl
 #set_property -dict { PACKAGE_PIN C19   IOSTANDARD LVCMOS12 } [get_ports { btnr }]; #IO_L24P_T3_17 Sch=btnr
 set_property -dict { PACKAGE_PIN B19   IOSTANDARD LVCMOS12 } [get_ports { GPIO_SW_N }]; #IO_L24N_T3_17 Sch=btnu
 #set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS33 } [get_ports { cpu_resetn }]; #IO_0_14 Sch=cpu_resetn
@@ -392,15 +392,15 @@ set_property -dict { PACKAGE_PIN V26   IOSTANDARD LVCMOS33 } [get_ports { count_
 ## DSPI
 ## Note: DPTI and DSPI constraints cannot be used in the same design, as they share pins.
 #set_property -dict { PACKAGE_PIN AD29  IOSTANDARD LVCMOS33 } [get_ports { PROG_SPIEN }]; #IO_L9P_T1_DQS_13 Sch=prog_spien
-set_property -dict { PACKAGE_PIN AD27  IOSTANDARD LVCMOS33 } [get_ports { spi_sck }]; #IO_L11P_T1_SRCC_13 Sch=prog_d0/sck
-set_property -dict { PACKAGE_PIN W27   IOSTANDARD LVCMOS33 } [get_ports { spi_mosi}]; #IO_L2P_T0_13 Sch=prog_d1/mosi
-set_property -dict { PACKAGE_PIN W28   IOSTANDARD LVCMOS33 } [get_ports { spi_miso }]; #IO_L2N_T0_13 Sch=prog_d2/miso
-set_property -dict { PACKAGE_PIN W29   IOSTANDARD LVCMOS33 } [get_ports { spi_ss }]; #IO_L4P_T0_13 Sch=prog_d3/ss
+#set_property -dict { PACKAGE_PIN AD27  IOSTANDARD LVCMOS33 } [get_ports { spi_sck }]; #IO_L11P_T1_SRCC_13 Sch=prog_d0/sck
+#set_property -dict { PACKAGE_PIN W27   IOSTANDARD LVCMOS33 } [get_ports { spi_mosi}]; #IO_L2P_T0_13 Sch=prog_d1/mosi
+#set_property -dict { PACKAGE_PIN W28   IOSTANDARD LVCMOS33 } [get_ports { spi_miso }]; #IO_L2N_T0_13 Sch=prog_d2/miso
+#set_property -dict { PACKAGE_PIN W29   IOSTANDARD LVCMOS33 } [get_ports { spi_ss }]; #IO_L4P_T0_13 Sch=prog_d3/ss
 
 ## QSPI
-#set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports { QSPI_CSN }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
-#set_property -dict { PACKAGE_PIN P24   IOSTANDARD LVCMOS33 } [get_ports { rom_data_in[0] }]; #IO_L1P_T0_D00_MOSI_14 Sch=qspi_d[0]
-#set_property -dict { PACKAGE_PIN R25   IOSTANDARD LVCMOS33 } [get_ports { rom_data_in[1] }]; #IO_L1N_T0_D01_DIN_14 Sch=qspi_d[1]
+set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports { spi_ss }]; #IO_L6P_T0_FCS_B_14 Sch=qspi_csn
+set_property -dict { PACKAGE_PIN P24   IOSTANDARD LVCMOS33 } [get_ports { spi_mosi }]; #IO_L1P_T0_D00_MOSI_14 Sch=qspi_d[0]
+set_property -dict { PACKAGE_PIN R25   IOSTANDARD LVCMOS33 } [get_ports { spi_miso }]; #IO_L1N_T0_D01_DIN_14 Sch=qspi_d[1]
 #set_property -dict { PACKAGE_PIN R20   IOSTANDARD LVCMOS33 } [get_ports { rom_data_in[2] }]; #IO_L2P_T0_D02_14 Sch=qspi_d[2]
 #set_property -dict { PACKAGE_PIN R21   IOSTANDARD LVCMOS33 } [get_ports { rom_data_in[3] }]; #IO_L2N_T0_D03_14 Sch=qspi_d[3]
 

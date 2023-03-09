@@ -1,0 +1,19 @@
+# Dynamic Function Exchange docs
+
+- [Dynamic Function Exchange Controller v1.0 Product Guide PG347](https://docs.xilinx.com/v/u/en-US/pg374-dfx-controller)
+
+- [Dynamic Function Exchange Lab Tutorials UG947](https://docs.xilinx.com/r/en-US/ug947-vivado-partial-reconfiguration-tutorial/Introduction)
+
+- [Dynamic Function Exchange User Guide UG909](https://docs.xilinx.com/r/en-US/ug909-vivado-partial-reconfiguration)
+
+# SPI docs
+
+- [Axi Quad SPI Product Guide PG153](https://docs.xilinx.com/r/en-US/pg153-axi-quad-spi/User-Parameters)
+
+- [Spansion S25FL256S Datasheet](https://www.infineon.com/dgdl/Infineon-S25FL128S_S25FL256S_128_Mb_(16_MB)_256_Mb_(32_MB)_3.0V_SPI_Flash_Memory-DataSheet-v18_00-EN.pdf?fileId=8ac78c8c7d0d8da4017d0ecfb6a64a17)
+
+- [Genesys 2 Reference Manual (Chapter 6.2)](https://digilent.com/reference/_media/reference/programmable-logic/genesys-2/genesys2_rm.pdf)
+
+- [7 Series FPGAs Configuration User Guide (UG470) (Chapter : Configuration Interfaces -> Master SPI Configuration Mode)](https://docs.xilinx.com/r/en-US/ug470_7Series_Config/Master-SPI-Configuration-Mode)
+
+- [Using SPI Flash With 7 Series FPGAs(XAPP586)](https://www.xilinx.com/content/dam/xilinx/support/documents/application_notes/xapp586-spi-flash.pdf)

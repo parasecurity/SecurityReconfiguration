@@ -58,7 +58,6 @@ axi_quad_spi_0 your_instance_name (
   .ext_spi_clk(ext_spi_clk),        // input wire ext_spi_clk
   .s_axi4_aclk(s_axi4_aclk),        // input wire s_axi4_aclk
   .s_axi4_aresetn(s_axi4_aresetn),  // input wire s_axi4_aresetn
-  .s_axi4_awid(s_axi4_awid),        // input wire [3 : 0] s_axi4_awid
   .s_axi4_awaddr(s_axi4_awaddr),    // input wire [23 : 0] s_axi4_awaddr
   .s_axi4_awlen(s_axi4_awlen),      // input wire [7 : 0] s_axi4_awlen
   .s_axi4_awsize(s_axi4_awsize),    // input wire [2 : 0] s_axi4_awsize
@@ -73,11 +72,9 @@ axi_quad_spi_0 your_instance_name (
   .s_axi4_wlast(s_axi4_wlast),      // input wire s_axi4_wlast
   .s_axi4_wvalid(s_axi4_wvalid),    // input wire s_axi4_wvalid
   .s_axi4_wready(s_axi4_wready),    // output wire s_axi4_wready
-  .s_axi4_bid(s_axi4_bid),          // output wire [3 : 0] s_axi4_bid
   .s_axi4_bresp(s_axi4_bresp),      // output wire [1 : 0] s_axi4_bresp
   .s_axi4_bvalid(s_axi4_bvalid),    // output wire s_axi4_bvalid
   .s_axi4_bready(s_axi4_bready),    // input wire s_axi4_bready
-  .s_axi4_arid(s_axi4_arid),        // input wire [3 : 0] s_axi4_arid
   .s_axi4_araddr(s_axi4_araddr),    // input wire [23 : 0] s_axi4_araddr
   .s_axi4_arlen(s_axi4_arlen),      // input wire [7 : 0] s_axi4_arlen
   .s_axi4_arsize(s_axi4_arsize),    // input wire [2 : 0] s_axi4_arsize
@@ -87,7 +84,6 @@ axi_quad_spi_0 your_instance_name (
   .s_axi4_arprot(s_axi4_arprot),    // input wire [2 : 0] s_axi4_arprot
   .s_axi4_arvalid(s_axi4_arvalid),  // input wire s_axi4_arvalid
   .s_axi4_arready(s_axi4_arready),  // output wire s_axi4_arready
-  .s_axi4_rid(s_axi4_rid),          // output wire [3 : 0] s_axi4_rid
   .s_axi4_rdata(s_axi4_rdata),      // output wire [31 : 0] s_axi4_rdata
   .s_axi4_rresp(s_axi4_rresp),      // output wire [1 : 0] s_axi4_rresp
   .s_axi4_rlast(s_axi4_rlast),      // output wire s_axi4_rlast

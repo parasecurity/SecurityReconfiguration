@@ -16,7 +16,7 @@ CONFIG.VS.counter.SHUTDOWN_ON_ERROR                1
 CONFIG.VS.counter.HAS_AXIS_STATUS                  1
 CONFIG.VS.counter.HAS_AXIS_CONTROL                 0
 CONFIG.VS.counter.HAS_POR_RM                       1
-CONFIG.VS.counter.POR_RM                           count_up
+CONFIG.VS.counter.POR_RM                           count_down
 CONFIG.VS.counter.SKIP_RM_STARTUP_AFTER_RESET      0
 CONFIG.VS.counter.TRIGGER0_TO_RM                   count_up
 CONFIG.VS.counter.TRIGGER1_TO_RM                   count_down
@@ -26,22 +26,22 @@ CONFIG.VS.counter.RM.count_up.SHUTDOWN_REQUIRED    no
 CONFIG.VS.counter.RM.count_up.STARTUP_REQUIRED     no
 CONFIG.VS.counter.RM.count_up.RESET_REQUIRED       high
 CONFIG.VS.counter.RM.count_up.RESET_DURATION       5
-CONFIG.VS.counter.RM.count_up.BS.0.ADDRESS         0
-CONFIG.VS.counter.RM.count_up.BS.0.SIZE            0
+CONFIG.VS.counter.RM.count_up.BS.0.ADDRESS         11444224
+CONFIG.VS.counter.RM.count_up.BS.0.SIZE            592736
 CONFIG.VS.counter.RM.count_up.BS.0.CLEAR           0
 CONFIG.VS.counter.RM.count_down.SHUTDOWN_REQUIRED  no
 CONFIG.VS.counter.RM.count_down.STARTUP_REQUIRED   no
 CONFIG.VS.counter.RM.count_down.RESET_REQUIRED     high
 CONFIG.VS.counter.RM.count_down.RESET_DURATION     5
-CONFIG.VS.counter.RM.count_down.BS.0.ADDRESS       0
-CONFIG.VS.counter.RM.count_down.BS.0.SIZE          0
+CONFIG.VS.counter.RM.count_down.BS.0.ADDRESS       12630016
+CONFIG.VS.counter.RM.count_down.BS.0.SIZE          592736
 CONFIG.VS.counter.RM.count_down.BS.0.CLEAR         0
 CONFIG.VS.counter.RM.count_half.SHUTDOWN_REQUIRED  no
 CONFIG.VS.counter.RM.count_half.STARTUP_REQUIRED   no
 CONFIG.VS.counter.RM.count_half.RESET_REQUIRED     high
 CONFIG.VS.counter.RM.count_half.RESET_DURATION     5
-CONFIG.VS.counter.RM.count_half.BS.0.ADDRESS       0
-CONFIG.VS.counter.RM.count_half.BS.0.SIZE          0
+CONFIG.VS.counter.RM.count_half.BS.0.ADDRESS       12037120
+CONFIG.VS.counter.RM.count_half.BS.0.SIZE          592736
 CONFIG.VS.counter.RM.count_half.BS.0.CLEAR         0
 
 
@@ -62,7 +62,7 @@ dfx_controller_v1_0::set_property -dict [list \
                                CONFIG.VS.counter.HAS_AXIS_STATUS                  1 \
                                CONFIG.VS.counter.HAS_AXIS_CONTROL                 0 \
                                CONFIG.VS.counter.HAS_POR_RM                       1 \
-                               CONFIG.VS.counter.POR_RM                           count_up \
+                               CONFIG.VS.counter.POR_RM                           count_down \
                                CONFIG.VS.counter.SKIP_RM_STARTUP_AFTER_RESET      0 \
                                CONFIG.VS.counter.TRIGGER0_TO_RM                   count_up \
                                CONFIG.VS.counter.TRIGGER1_TO_RM                   count_down \
@@ -72,22 +72,22 @@ dfx_controller_v1_0::set_property -dict [list \
                                CONFIG.VS.counter.RM.count_up.STARTUP_REQUIRED     no \
                                CONFIG.VS.counter.RM.count_up.RESET_REQUIRED       high \
                                CONFIG.VS.counter.RM.count_up.RESET_DURATION       5 \
-                               CONFIG.VS.counter.RM.count_up.BS.0.ADDRESS         0 \
-                               CONFIG.VS.counter.RM.count_up.BS.0.SIZE            0 \
+                               CONFIG.VS.counter.RM.count_up.BS.0.ADDRESS         11444224 \
+                               CONFIG.VS.counter.RM.count_up.BS.0.SIZE            592736 \
                                CONFIG.VS.counter.RM.count_up.BS.0.CLEAR           0 \
                                CONFIG.VS.counter.RM.count_down.SHUTDOWN_REQUIRED  no \
                                CONFIG.VS.counter.RM.count_down.STARTUP_REQUIRED   no \
                                CONFIG.VS.counter.RM.count_down.RESET_REQUIRED     high \
                                CONFIG.VS.counter.RM.count_down.RESET_DURATION     5 \
-                               CONFIG.VS.counter.RM.count_down.BS.0.ADDRESS       0 \
-                               CONFIG.VS.counter.RM.count_down.BS.0.SIZE          0 \
+                               CONFIG.VS.counter.RM.count_down.BS.0.ADDRESS       12630016 \
+                               CONFIG.VS.counter.RM.count_down.BS.0.SIZE          592736 \
                                CONFIG.VS.counter.RM.count_down.BS.0.CLEAR         0 \
                                CONFIG.VS.counter.RM.count_half.SHUTDOWN_REQUIRED  no \
                                CONFIG.VS.counter.RM.count_half.STARTUP_REQUIRED   no \
                                CONFIG.VS.counter.RM.count_half.RESET_REQUIRED     high \
                                CONFIG.VS.counter.RM.count_half.RESET_DURATION     5 \
-                               CONFIG.VS.counter.RM.count_half.BS.0.ADDRESS       0 \
-                               CONFIG.VS.counter.RM.count_half.BS.0.SIZE          0 \
+                               CONFIG.VS.counter.RM.count_half.BS.0.ADDRESS       12037120 \
+                               CONFIG.VS.counter.RM.count_half.BS.0.SIZE          592736 \
                                CONFIG.VS.counter.RM.count_half.BS.0.CLEAR         0 \
                              ] [get_ips dfx_controller_0]
 

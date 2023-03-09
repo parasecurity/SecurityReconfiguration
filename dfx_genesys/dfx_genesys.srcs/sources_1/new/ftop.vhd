@@ -38,7 +38,7 @@ entity top is
     -- 
     GPIO_SW_N : in std_logic;
     GPIO_SW_S : in std_logic;
-   -- GPIO_SW_W : in std_logic;
+    GPIO_SW_W : in std_logic;
     --GPIO_SW_E : in std_logic;
     GPIO_SW_C : in std_logic;
 
@@ -54,7 +54,7 @@ entity top is
     
     -- SPI
     --
-    spi_sck  : out std_logic;
+    --spi_sck  : out std_logic;
     spi_mosi : out std_logic;
     spi_miso : in std_logic;
     spi_ss   : out std_logic
@@ -278,7 +278,6 @@ component axi_quad_spi_0 is
     ext_spi_clk : IN STD_LOGIC;
     s_axi4_aclk : IN STD_LOGIC;
     s_axi4_aresetn : IN STD_LOGIC;
-    s_axi4_awid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_awaddr : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     s_axi4_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi4_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -293,11 +292,9 @@ component axi_quad_spi_0 is
     s_axi4_wlast : IN STD_LOGIC;
     s_axi4_wvalid : IN STD_LOGIC;
     s_axi4_wready : OUT STD_LOGIC;
-    s_axi4_bid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi4_bvalid : OUT STD_LOGIC;
     s_axi4_bready : IN STD_LOGIC;
-    s_axi4_arid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_araddr : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     s_axi4_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi4_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -307,7 +304,6 @@ component axi_quad_spi_0 is
     s_axi4_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi4_arvalid : IN STD_LOGIC;
     s_axi4_arready : OUT STD_LOGIC;
-    s_axi4_rid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi4_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi4_rlast : OUT STD_LOGIC;
@@ -383,22 +379,6 @@ end component;
 --      );
 --  end component;
 
-  component ila_rom
-    port (
-      clk          : in  std_logic;
-      trig_out     : out std_logic;
-      trig_out_ack : in  std_logic;
-      probe0       : in  std_logic_vector(15 downto 0);
-      probe1       : in  std_logic_vector(25 downto 0);
-      probe2       : in  std_logic_vector( 0 downto 0);
-      probe3       : in  std_logic_vector( 0 downto 0);
-      probe4       : in  std_logic_vector( 0 downto 0);
-      probe5       : in  std_logic_vector( 0 downto 0);
-      probe6       : in  std_logic_vector( 0 downto 0)
-      );
-  end component;
-
-
   component ila_icap
     port (
       clk          : in  std_logic;
@@ -410,10 +390,12 @@ end component;
       probe3       : in  std_logic_vector(0 downto 0)
       );
   end component;
-
+  
   component ila_axi_mem
     port (
       clk     : in std_logic;
+      trig_out     : out std_logic;
+      trig_out_ack : in  std_logic;
       probe0  : in std_logic_vector(31 downto 0);
       probe1  : in std_logic_vector(7 downto 0);
       probe2  : in std_logic_vector(2 downto 0);
@@ -430,12 +412,12 @@ end component;
       probe13 : in std_logic_vector(0 downto 0)
       );
   end component;
-
-
-
+  
   component ila_axi_reg
     port (
       clk     : in std_logic;
+      trig_out     : out std_logic;
+      trig_out_ack : in  std_logic;
       probe0  : in std_logic_vector(31 downto 0);
       probe1  : in std_logic_vector(0 downto 0);
       probe2  : in std_logic_vector(0 downto 0);
@@ -452,6 +434,17 @@ end component;
       probe13 : in std_logic_vector(1 downto 0);
       probe14 : in std_logic_vector(0 downto 0);
       probe15 : in std_logic_vector(0 downto 0)
+      );
+  end component;
+  
+  component ila_rom
+    port (
+      clk          : in  std_logic;
+      trig_out     : out std_logic;
+      trig_out_ack : in  std_logic;
+      probe0       : in  std_logic;
+      probe1       : in  std_logic;
+      probe2       : in  std_logic
       );
   end component;
 
@@ -629,7 +622,7 @@ begin
 
   vs_counter_hw_triggers(0) <= gpio_sw_n_dbnc;
   vs_counter_hw_triggers(1) <= gpio_sw_s_dbnc;
-  vs_counter_hw_triggers(2) <= '0';
+  vs_counter_hw_triggers(2) <= gpio_sw_w_dbnc;
   vs_counter_hw_triggers(3) <= '0';
 
 
@@ -658,7 +651,6 @@ begin
       m_axi_rvalid  => m_axi_rvalid,
       m_axi_rready  => m_axi_rready
       );
-
 
 
   -- Instantiate ICAP primitive
@@ -712,6 +704,126 @@ begin
         probe4       => vs_counter_rm_reset_v
         );
   end block;
+  
+  
+  b_ila_icap            : block
+    signal icap_csib_v  : std_logic_vector(0 downto 0);
+    signal icap_rdwrb_v : std_logic_vector(0 downto 0);
+    signal icap_status  : std_logic_vector(3 downto 0);
+  begin
+    icap_csib_v(0)  <= icap_csib;
+    icap_rdwrb_v(0) <= icap_rdwrb;
+    icap_status     <= s_icap_o(7 downto 4);
+
+    i_ila_icap : ila_icap
+      port map (
+        clk          => clk_100,
+        trig_out     => open,
+        trig_out_ack => '1',
+        probe0       => s_icap_i,
+        probe1       => icap_status,
+        probe2       => icap_csib_v,
+        probe3       => icap_rdwrb_v
+        );
+  end block;
+  
+  
+b_ila_axi_mem                : block
+    signal m_axi_mem_arvalid_v : std_logic_vector(0 downto 0);
+    signal m_axi_mem_arready_v : std_logic_vector(0 downto 0);
+    signal m_axi_mem_rlast_v   : std_logic_vector(0 downto 0);
+    signal m_axi_mem_rvalid_v  : std_logic_vector(0 downto 0);
+    signal m_axi_mem_rready_v  : std_logic_vector(0 downto 0);
+  begin
+    m_axi_mem_arvalid_v(0) <= m_axi_mem_arvalid;
+    m_axi_mem_arready_v(0) <= m_axi_mem_arready;
+    m_axi_mem_rlast_v(0)   <= m_axi_mem_rlast;
+    m_axi_mem_rvalid_v(0)  <= m_axi_mem_rvalid;
+    m_axi_mem_rready_v(0)  <= m_axi_mem_rready;
+
+  i_ila_axi_mem : ila_axi_mem
+      port map (
+        clk     => clk_100,
+        trig_out     => open,
+        trig_out_ack => '1',
+        probe0  => m_axi_mem_araddr,
+        probe1  => m_axi_mem_arlen,
+        probe2  => m_axi_mem_arsize,
+        probe3  => m_axi_mem_arburst,
+        probe4  => m_axi_mem_arprot,
+        probe5  => m_axi_mem_arcache,
+        probe6  => m_axi_mem_aruser,
+        probe7  => m_axi_mem_arvalid_v,
+        probe8  => m_axi_mem_arready_v,
+        probe9  => m_axi_mem_rdata,
+        probe10 => m_axi_mem_rresp,
+        probe11 => m_axi_mem_rlast_v,
+        probe12 => m_axi_mem_rvalid_v,
+        probe13 => m_axi_mem_rready_v );
+  end block;
+  
+  b_ila_axi_reg            : block
+    signal m_axi_awvalid_v : std_logic_vector(0 downto 0);
+    signal m_axi_awready_v : std_logic_vector(0 downto 0);
+    signal m_axi_wvalid_v  : std_logic_vector(0 downto 0);
+    signal m_axi_wready_v  : std_logic_vector(0 downto 0);
+    signal m_axi_bvalid_v  : std_logic_vector(0 downto 0);
+    signal m_axi_bready_v  : std_logic_vector(0 downto 0);
+    signal m_axi_arvalid_v : std_logic_vector(0 downto 0);
+    signal m_axi_arready_v : std_logic_vector(0 downto 0);
+    signal m_axi_rvalid_v  : std_logic_vector(0 downto 0);
+    signal m_axi_rready_v  : std_logic_vector(0 downto 0);
+  begin
+    m_axi_awvalid_v(0) <= m_axi_awvalid;
+    m_axi_awready_v(0) <= m_axi_awready;
+    m_axi_wvalid_v(0)  <= m_axi_wvalid;
+    m_axi_wready_v(0)  <= m_axi_wready;
+    m_axi_bvalid_v(0)  <= m_axi_bvalid;
+    m_axi_bready_v(0)  <= m_axi_bready;
+    m_axi_arvalid_v(0) <= m_axi_arvalid;
+    m_axi_arready_v(0) <= m_axi_arready;
+    m_axi_rvalid_v(0)  <= m_axi_rvalid;
+    m_axi_rready_v(0)  <= m_axi_rready;
+       
+
+    i_ila_axi_reg : ila_axi_reg
+      port map (
+        clk     => clk_100,
+        trig_out     => open,
+        trig_out_ack => '1',
+        probe0  => m_axi_awaddr,
+        probe1  => m_axi_awvalid_v,
+        probe2  => m_axi_awready_v,
+        probe3  => m_axi_wdata,
+        probe4  => m_axi_wvalid_v,
+        probe5  => m_axi_wready_v,
+        probe6  => m_axi_bresp,
+        probe7  => m_axi_bvalid_v,
+        probe8  => m_axi_bready_v,
+        probe9  => m_axi_araddr,
+        probe10 => m_axi_arvalid_v,
+        probe11 => m_axi_arready_v,
+        probe12 => m_axi_rdata,
+        probe13 => m_axi_rresp,
+        probe14 => m_axi_rvalid_v,
+        probe15 => m_axi_rready_v
+        );
+  end block;
+  
+  
+ b_ila_rom   : block
+  begin
+    i_ila_rom : ila_rom
+      port map (
+        clk          => clk_100,
+        trig_out     => open,
+        trig_out_ack => '1',
+        probe0       => spi_miso,
+        probe1       => s_io0_o,
+        probe2       => s_ss_o(0)
+        );
+  end block;
+  
 
   
   -- Instantiate the AXI Quad Spi
@@ -721,7 +833,6 @@ begin
     ext_spi_clk      => clk_100,
     s_axi4_aclk      => clk_100,
     s_axi4_aresetn   => por_rst_n,
-    s_axi4_awid      => (others => '0'),
     s_axi4_awaddr    => (others => '0'),
     s_axi4_awlen     => (others => '0'),
     s_axi4_awsize    => (others => '0'),
@@ -736,11 +847,9 @@ begin
     s_axi4_wlast     => '0',
     s_axi4_wvalid    => '0',
     s_axi4_wready    => open,
-    s_axi4_bid       => open,
     s_axi4_bresp     => open,
     s_axi4_bvalid    => open,
     s_axi4_bready    => '0',
-    s_axi4_arid      => (others => '0'),
     s_axi4_araddr    => m_axi_mem_araddr(23 downto 0),
     s_axi4_arlen     => m_axi_mem_arlen,
     s_axi4_arsize    => m_axi_mem_arsize,
@@ -750,7 +859,6 @@ begin
     s_axi4_arprot    => m_axi_mem_arprot,
     s_axi4_arvalid   => m_axi_mem_arvalid,
     s_axi4_arready   => m_axi_mem_arready,
-    s_axi4_rid       => open,
     s_axi4_rdata     => m_axi_mem_rdata,
     s_axi4_rresp     => m_axi_mem_rresp_original,
     s_axi4_rlast     => m_axi_mem_rlast,
@@ -772,7 +880,7 @@ begin
     ip2intc_irpt  => s_ip2intc_irpt
   );
 
-   spi_sck   <= s_sck_o;
+   --spi_sck   <= s_sck_o;
    spi_mosi  <= s_io0_o;
    spi_ss    <= s_ss_o(0);
 
@@ -830,15 +938,15 @@ begin
 --      input_to_debounce => GPIO_SW_E,
 --      debounced_signal  => gpio_sw_e_dbnc
 --      );
---  i_gpio_sw_w_dbnc : entity work.debouncer
---    generic map(
---      C_WIDTH           => DEBOUNCE_SIZE
---      )
---    port map(
---      clk               => clk_100,
---      input_to_debounce => GPIO_SW_W,
---      debounced_signal  => gpio_sw_w_dbnc
---      );
+  i_gpio_sw_w_dbnc : entity work.debouncer
+    generic map(
+      C_WIDTH           => DEBOUNCE_SIZE
+      )
+    port map(
+      clk               => clk_100,
+      input_to_debounce => GPIO_SW_W,
+      debounced_signal  => gpio_sw_w_dbnc
+      );
   i_gpio_sw_c_dbnc : entity work.debouncer
     generic map(
       C_WIDTH           => DEBOUNCE_SIZE

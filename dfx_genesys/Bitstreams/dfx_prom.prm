@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX1
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+Checksum           0x51DAC6DD
+Fill Value         0xFF
+
+Addr1         Addr2         Date                    File(s)               Checksum
+0x00000000    0x00AE9D9B    Mar  9 14:07:24 2023    Bitstreams/top.bit    0x01C9C541
+File Checksum Total                                                       0x01C9C541

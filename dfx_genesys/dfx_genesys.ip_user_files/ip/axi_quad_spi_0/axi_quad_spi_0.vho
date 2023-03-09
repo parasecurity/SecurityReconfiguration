@@ -56,7 +56,6 @@ COMPONENT axi_quad_spi_0
     ext_spi_clk : IN STD_LOGIC;
     s_axi4_aclk : IN STD_LOGIC;
     s_axi4_aresetn : IN STD_LOGIC;
-    s_axi4_awid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_awaddr : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     s_axi4_awlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi4_awsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -71,11 +70,9 @@ COMPONENT axi_quad_spi_0
     s_axi4_wlast : IN STD_LOGIC;
     s_axi4_wvalid : IN STD_LOGIC;
     s_axi4_wready : OUT STD_LOGIC;
-    s_axi4_bid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_bresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi4_bvalid : OUT STD_LOGIC;
     s_axi4_bready : IN STD_LOGIC;
-    s_axi4_arid : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_araddr : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
     s_axi4_arlen : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     s_axi4_arsize : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
@@ -85,7 +82,6 @@ COMPONENT axi_quad_spi_0
     s_axi4_arprot : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     s_axi4_arvalid : IN STD_LOGIC;
     s_axi4_arready : OUT STD_LOGIC;
-    s_axi4_rid : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     s_axi4_rdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi4_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi4_rlast : OUT STD_LOGIC;
@@ -117,7 +113,6 @@ your_instance_name : axi_quad_spi_0
     ext_spi_clk => ext_spi_clk,
     s_axi4_aclk => s_axi4_aclk,
     s_axi4_aresetn => s_axi4_aresetn,
-    s_axi4_awid => s_axi4_awid,
     s_axi4_awaddr => s_axi4_awaddr,
     s_axi4_awlen => s_axi4_awlen,
     s_axi4_awsize => s_axi4_awsize,
@@ -132,11 +127,9 @@ your_instance_name : axi_quad_spi_0
     s_axi4_wlast => s_axi4_wlast,
     s_axi4_wvalid => s_axi4_wvalid,
     s_axi4_wready => s_axi4_wready,
-    s_axi4_bid => s_axi4_bid,
     s_axi4_bresp => s_axi4_bresp,
     s_axi4_bvalid => s_axi4_bvalid,
     s_axi4_bready => s_axi4_bready,
-    s_axi4_arid => s_axi4_arid,
     s_axi4_araddr => s_axi4_araddr,
     s_axi4_arlen => s_axi4_arlen,
     s_axi4_arsize => s_axi4_arsize,
@@ -146,7 +139,6 @@ your_instance_name : axi_quad_spi_0
     s_axi4_arprot => s_axi4_arprot,
     s_axi4_arvalid => s_axi4_arvalid,
     s_axi4_arready => s_axi4_arready,
-    s_axi4_rid => s_axi4_rid,
     s_axi4_rdata => s_axi4_rdata,
     s_axi4_rresp => s_axi4_rresp,
     s_axi4_rlast => s_axi4_rlast,

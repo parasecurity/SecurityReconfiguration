@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Sun Mar  5 18:58:36 2023
+-- Date        : Wed Mar  8 22:53:12 2023
 -- Host        : alex running 64-bit Ubuntu 22.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/alex/SecurityReconfiguration/dfx_genesys/dfx_genesys.gen/sources_1/ip/ila_vs_count/ila_vs_count_stub.vhdl

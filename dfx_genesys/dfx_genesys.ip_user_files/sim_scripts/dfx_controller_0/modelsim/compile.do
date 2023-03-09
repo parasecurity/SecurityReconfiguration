@@ -38,9 +38,9 @@ vmap dfx_controller_v1_0_3 modelsim_lib/msim/dfx_controller_v1_0_3
 vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib
 
 vlog -work xpm -64 -incr -mfcu  -sv \
+"/home/alex/tools/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/home/alex/tools/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "/home/alex/tools/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
-"/home/alex/tools/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 
 vcom -work xpm -64 -93  \
 "/home/alex/tools/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
