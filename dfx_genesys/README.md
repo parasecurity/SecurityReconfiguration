@@ -1,4 +1,6 @@
-# Dynamic Function Exchange docs
+# Useful Docs
+
+## Dynamic Function Exchange docs
 
 - [Dynamic Function Exchange Controller v1.0 Product Guide PG347](https://docs.xilinx.com/v/u/en-US/pg374-dfx-controller)
 
@@ -6,7 +8,7 @@
 
 - [Dynamic Function Exchange User Guide UG909](https://docs.xilinx.com/r/en-US/ug909-vivado-partial-reconfiguration)
 
-# SPI docs
+## SPI docs
 
 - [Axi Quad SPI Product Guide PG153](https://docs.xilinx.com/r/en-US/pg153-axi-quad-spi/User-Parameters)
 
