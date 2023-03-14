@@ -26,9 +26,9 @@ foreach p $partials {
 
 # Now do the static and pack the partials as datafiles
 set cmd "write_cfgmem $options $final_target $spi_options -loadbit \"up 0 Bitstreams/${static}.bit \" -loaddata \""
-# append cmd " up 00AEA000 Bitstreams/inst_count_count_up_partial.bin"
-# append cmd " up 00B7AC00 Bitstreams/inst_count_count_half_partial.bin"
-# append cmd " up 00C0B800 Bitstreams/inst_count_count_down_partial.bin"
+ append cmd " up 00AEA000 Bitstreams/inst_count_count_up_partial.bin"
+ append cmd " up 00B7AC00 Bitstreams/inst_count_count_half_partial.bin"
+ append cmd " up 00C0B800 Bitstreams/inst_count_count_down_partial.bin"
 append cmd "\" Bitstreams/dfx_prom"
 
 puts $cmd

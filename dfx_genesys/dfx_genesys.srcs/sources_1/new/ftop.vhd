@@ -479,7 +479,7 @@ begin
   -- Generate an active high reset for the DFX Controller, either at power on or when the user presses the center button
   rst <= '1' when reset_vector(0) = '1' or gpio_sw_c_dbnc = '1' else '0';
 
-  -- Generate a reset for the AXI EMC block at power on
+  -- Generate a reset for the axi quad spi block at power on
   por_rst_n <= not reset_vector(0);
 
   -- -------------------------------------------------------------------------
