@@ -1,2 +1,0 @@
-jtag_axi_0.v,verilog,xil_defaultlib,../../../../dfx_genesys.gen/sources_1/ip/jtag_axi_0/sim/jtag_axi_0.v,incdir="../../../../dfx_genesys.gen/sources_1/ip/jtag_axi_0/hdl/verilog"
-glbl.v,Verilog,xil_defaultlib,glbl.v

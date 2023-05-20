@@ -1,0 +1,2 @@
+axi_datamover_0.vhd,vhdl,xil_defaultlib,../../../../sdReadtest.gen/sources_1/ip/axi_datamover_0/sim/axi_datamover_0.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

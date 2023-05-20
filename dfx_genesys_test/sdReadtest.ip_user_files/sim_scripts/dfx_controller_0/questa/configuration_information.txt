@@ -1,0 +1,111 @@
+Core Configuration Properties
+=============================
+CONFIG.HAS_AXI_LITE_IF                             1
+CONFIG.RESET_ACTIVE_LEVEL                          1
+CONFIG.CP_FIFO_DEPTH                               32
+CONFIG.CP_FIFO_TYPE                                lutram
+CONFIG.CP_ARBITRATION_PROTOCOL                     1
+CONFIG.CP_COMPRESSION                              0
+CONFIG.CP_FAMILY                                   7series
+CONFIG.CDC_STAGES                                  2
+CONFIG.VS.counter.START_IN_SHUTDOWN                0
+CONFIG.VS.counter.NUM_TRIGGERS_ALLOCATED           2
+CONFIG.VS.counter.NUM_RMS_ALLOCATED                2
+CONFIG.VS.counter.NUM_HW_TRIGGERS                  2
+CONFIG.VS.counter.SHUTDOWN_ON_ERROR                1
+CONFIG.VS.counter.HAS_AXIS_STATUS                  1
+CONFIG.VS.counter.HAS_AXIS_CONTROL                 0
+CONFIG.VS.counter.HAS_POR_RM                       1
+CONFIG.VS.counter.POR_RM                           count_up
+CONFIG.VS.counter.SKIP_RM_STARTUP_AFTER_RESET      0
+CONFIG.VS.counter.TRIGGER0_TO_RM                   count_up
+CONFIG.VS.counter.TRIGGER1_TO_RM                   count_down
+CONFIG.VS.counter.RM.count_up.SHUTDOWN_REQUIRED    no
+CONFIG.VS.counter.RM.count_up.STARTUP_REQUIRED     no
+CONFIG.VS.counter.RM.count_up.RESET_REQUIRED       high
+CONFIG.VS.counter.RM.count_up.RESET_DURATION       5
+CONFIG.VS.counter.RM.count_up.BS.0.ADDRESS         4096
+CONFIG.VS.counter.RM.count_up.BS.0.SIZE            644428
+CONFIG.VS.counter.RM.count_up.BS.0.CLEAR           0
+CONFIG.VS.counter.RM.count_down.SHUTDOWN_REQUIRED  no
+CONFIG.VS.counter.RM.count_down.STARTUP_REQUIRED   no
+CONFIG.VS.counter.RM.count_down.RESET_REQUIRED     high
+CONFIG.VS.counter.RM.count_down.RESET_DURATION     6
+CONFIG.VS.counter.RM.count_down.BS.0.ADDRESS       851968
+CONFIG.VS.counter.RM.count_down.BS.0.SIZE          644428
+CONFIG.VS.counter.RM.count_down.BS.0.CLEAR         0
+
+
+dfx_controller_v1_0::set_property -dict [list \
+                               CONFIG.HAS_AXI_LITE_IF                             1 \
+                               CONFIG.RESET_ACTIVE_LEVEL                          1 \
+                               CONFIG.CP_FIFO_DEPTH                               32 \
+                               CONFIG.CP_FIFO_TYPE                                lutram \
+                               CONFIG.CP_ARBITRATION_PROTOCOL                     1 \
+                               CONFIG.CP_COMPRESSION                              0 \
+                               CONFIG.CP_FAMILY                                   7series \
+                               CONFIG.CDC_STAGES                                  2 \
+                               CONFIG.VS.counter.START_IN_SHUTDOWN                0 \
+                               CONFIG.VS.counter.NUM_TRIGGERS_ALLOCATED           2 \
+                               CONFIG.VS.counter.NUM_RMS_ALLOCATED                2 \
+                               CONFIG.VS.counter.NUM_HW_TRIGGERS                  2 \
+                               CONFIG.VS.counter.SHUTDOWN_ON_ERROR                1 \
+                               CONFIG.VS.counter.HAS_AXIS_STATUS                  1 \
+                               CONFIG.VS.counter.HAS_AXIS_CONTROL                 0 \
+                               CONFIG.VS.counter.HAS_POR_RM                       1 \
+                               CONFIG.VS.counter.POR_RM                           count_up \
+                               CONFIG.VS.counter.SKIP_RM_STARTUP_AFTER_RESET      0 \
+                               CONFIG.VS.counter.TRIGGER0_TO_RM                   count_up \
+                               CONFIG.VS.counter.TRIGGER1_TO_RM                   count_down \
+                               CONFIG.VS.counter.RM.count_up.SHUTDOWN_REQUIRED    no \
+                               CONFIG.VS.counter.RM.count_up.STARTUP_REQUIRED     no \
+                               CONFIG.VS.counter.RM.count_up.RESET_REQUIRED       high \
+                               CONFIG.VS.counter.RM.count_up.RESET_DURATION       5 \
+                               CONFIG.VS.counter.RM.count_up.BS.0.ADDRESS         4096 \
+                               CONFIG.VS.counter.RM.count_up.BS.0.SIZE            644428 \
+                               CONFIG.VS.counter.RM.count_up.BS.0.CLEAR           0 \
+                               CONFIG.VS.counter.RM.count_down.SHUTDOWN_REQUIRED  no \
+                               CONFIG.VS.counter.RM.count_down.STARTUP_REQUIRED   no \
+                               CONFIG.VS.counter.RM.count_down.RESET_REQUIRED     high \
+                               CONFIG.VS.counter.RM.count_down.RESET_DURATION     6 \
+                               CONFIG.VS.counter.RM.count_down.BS.0.ADDRESS       851968 \
+                               CONFIG.VS.counter.RM.count_down.BS.0.SIZE          644428 \
+                               CONFIG.VS.counter.RM.count_down.BS.0.CLEAR         0 \
+                             ] [get_ips dfx_controller_0]
+
+ID Mapping
+=============================
+Virtual Socket Manager counter is assigned ID 0
+  Reconfigurable Module count_up is assigned ID 0
+  Reconfigurable Module count_down is assigned ID 1
+
+
+Address Structure
+=============================
+The addresses are structured as follows:
+  There is no VSM Select slice as there's only one VSM
+  address[ 6: 5]  : Selects the Register Bank
+  address[ 4: 2]  : Selects the Register within the bank
+
+Address Map
+=============================
+| Virtual Socket Manager | Register     | Address |
++------------------------+--------------+---------+
+| counter                | STATUS       | 0X00000 |
+| counter                | CONTROL      | 0X00000 |
+| counter                | SW_TRIGGER   | 0X00004 |
+| counter                | TRIGGER0     | 0X00020 |
+| counter                | TRIGGER1     | 0X00024 |
+| counter                | RM_BS_INDEX0 | 0X00040 |
+| counter                | RM_CONTROL0  | 0X00044 |
+| counter                | RM_BS_INDEX1 | 0X00048 |
+| counter                | RM_CONTROL1  | 0X0004C |
+| counter                | BS_ID0       | 0X00060 |
+| counter                | BS_ADDRESS0  | 0X00064 |
+| counter                | BS_SIZE0     | 0X00068 |
+| counter                | BS_ID1       | 0X00070 |
+| counter                | BS_ADDRESS1  | 0X00074 |
+| counter                | BS_SIZE1     | 0X00078 |
+
+
+
