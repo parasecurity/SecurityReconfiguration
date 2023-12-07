@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SMAPX32
+Size               2M
+Start Address      0x00000000
+End Address        0x001FFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x0017459B    Nov 30 14:12:23 2023    Bitstreams/i_ariane_i_cva6_i_cache_subsystem_dcache_wt_dcache_partial.bit
