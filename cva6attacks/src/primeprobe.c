@@ -74,7 +74,7 @@ void probe(__uint128_t *array){
 
 void trojan(char *key){
 	//trojan will evict specific cache lines according to the bits of the secret key
-	__uint128_t trojan_array[cache_size] __attribute__((aligned(128)));
+	__uint128_t trojan_array[cache_size] __attribute__((aligned(4096))); //allign it to the start of a way
 	__uint128_t temp = 16;
 	int i , j ;
 	//transform the key into bits
@@ -93,12 +93,12 @@ void trojan(char *key){
 					//evict at position j+i (set 0 for first bit, set 1 for second bit, etc.)				
 					if (key_bits[i] == '1'){
 						if ( i > 87 ){		//we cant use the octave of cache sets 88 - 95, because 88 gets always evicted no matter what
-							trojan_array[j+i+8+8] = 150;	//we skip over the cache sets 88 - 95 by adding an extra 8 indexes
-							temp = trojan_array[j+i+8+8];	
+							trojan_array[j+i+8] = 150;	//we skip over the cache sets 88 - 95 by adding an extra 8 indexes
+							temp = trojan_array[j+i+8];	
 						}
 						else{
-							trojan_array[j+i+8] = 150;
-							temp = trojan_array[j+i+8];	//add 8 to get to the same set as the prime_array
+							trojan_array[j+i] = 150;
+							temp = trojan_array[j+i];
 						}
 					}
 				}
@@ -165,10 +165,12 @@ void read_sets(){
 	int i = 0;
 	int evicted_ways[256] = {0};	//keep amount of way evictions in each set
 	int evictions = 0 ;
+	int total_misses = 0 ;
 	//find out how many ways of each set got evicted
 	for(i = 0 ; i < cache_size ; i++){
 		int way = i/256;
 		int set = i - (way*256);
+		total_misses = total_misses + miss[i];
 		if(miss[i] > 150){
 			//printf("Index %d, Cache way %d, Set %d got evicted %d times\n",i,way,set,miss[i]);
 			evicted_ways[set]++;
@@ -191,6 +193,8 @@ void read_sets(){
 	printf("Total evictions %d\n",evictions);
 	printf("Total sets evicted %d\n",total_sets_evicted);
 
+	printf("Total misses %d\n",total_misses);
+
 	reconstruct(set_evicted);
 }
 
@@ -200,15 +204,22 @@ void read_sets(){
 
 
 int main(){
-	__uint128_t prime_array[cache_size] __attribute__((aligned(128))); //define array the size of the cache
+	__uint128_t prime_array[cache_size] __attribute__((aligned(4096))); //define array the size of the cache
 
+	register unsigned long start_at,end_at,diff_at;
+	asm volatile ("rdcycle %0" : "=r" (start_at));	
 	for (int i = 0 ; i < iterations ; i ++){
 		prime(prime_array);		//prime the cache
 		victim();
 		probe(prime_array);		//probe the cache
 	}
+	asm volatile ("rdcycle %0" : "=r" (end_at));
+	diff_at = end_at - start_at;
+	
 
 	read_sets();
+
+	printf("Time to run attack is %d\n",diff_at);
 
 	return 0;
 

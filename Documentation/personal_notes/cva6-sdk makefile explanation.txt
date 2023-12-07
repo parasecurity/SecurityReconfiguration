@@ -1,0 +1,20 @@
+cva6-sdk makefile
+
+first create images -> make images -> creates fw_payload.bin and uImage files (2.5.MB and 10MB each)
+
+then format sd card -> with sgdisk --clear -g and create 2 new partitions for payload and image.
+
+calculate how many sectors each file will take (each sector is 512 bytes)
+so payload_bin requires 4861 sectors, starts from sector 2048. goes until sector 6909 ("sudo sgdisk --print" shows sectors)
+uImage starts from sector 1048576(512M in) untill the end.
+
+then copy the 2 files in each partition with dd command (of(output file) is each partition, to get each partition we use the lsblk command)
+so payload bin goes to /dev/sdc1 and uimage goes to /dev/sdc2
+
+run "sudo -E make flash-sdcard SDDEVICE=/dev/sdc"
+
+
+--main function in bootrom -> calls gpt_Find_partition to read the partition table header (LBA1) and its data, then reads the partition entries
+In this case it only reads LBA2 since we have 2 partitions. LBA2 contains 4 partition entry blocks of 128 bytes each. First block contains information on the first partition which contains the payload_bin file (which containts u-boot (First stage bootloader) and OPENSBI) and spans from LBA 2048 to LBA 6909.. Second block contains information on the second partition which spans from LBA 1048576 untill the end, and contains the uImage linux file
+
+gpt_find_partition reads the entire first partition which contains the payload and saves it into the address given as argument (in this case 0x80000000UL)

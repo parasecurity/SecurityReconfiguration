@@ -9,10 +9,11 @@ OBJ:=obj
 BIN:=bin
 DMP:=dump
 DEP:=dep
+CCDIR:=/home/alex/cva6-sdk/buildroot/output/host/bin/
 
 # Commands and flags
-CC:=/home/alex/cva6-sdk/buildroot/output/host/bin/riscv64-buildroot-linux-gnu-gcc
-OBJDUMP:=/home/alex/cva6-sdk/buildroot/output/host/bin/riscv64-buildroot-linux-gnu-objdump -S
+CC:=$(CCDIR)riscv64-buildroot-linux-gnu-gcc
+OBJDUMP:=$(CCDIR)riscv64-buildroot-linux-gnu-objdump -S
 LDFLAGS:=-static -lgcc
 
 CFLAGS=-mcmodel=medany -l -std=gnu99 -O0 -g -fno-common -fno-builtin-printf -Wall -Wno-unused-function -Wno-unused-variable -Wno-unused
@@ -20,7 +21,7 @@ DEPFLAGS=-MT $@ -MMD -MP -MF $(DEP)/$*.d
 RM=rm -rf
 
 # Programs to compile
-PROGRAMS=primeprobe evictreload
+PROGRAMS=primeprobe evictreload printest primeprobe2
 BINS=$(addprefix $(BIN)/,$(addsuffix .riscv,$(PROGRAMS)))
 DUMPS=$(addprefix $(DMP)/,$(addsuffix .dump,$(PROGRAMS)))
 
@@ -30,10 +31,6 @@ bin: $(BINS)
 dumps: $(DUMPS)
 
 # Build object files
-$(OBJ)/%.o: $(SRC)/%.S
-	@mkdir -p $(OBJ)
-	$(CC) $(CFLAGS) -D__ASSEMBLY__=1 -c $< -o $@
-
 $(OBJ)/%.o: $(SRC)/%.c
 	@mkdir -p $(OBJ)
 	@mkdir -p $(DEP)
@@ -42,7 +39,7 @@ $(OBJ)/%.o: $(SRC)/%.c
 # Build executable
 $(BIN)/%.riscv: $(OBJ)/%.o
 	@mkdir -p $(BIN)
-	$(CC) $(LDFLAGS) $< -o $@
+	$(CC) $< -o $@
 
 # Build dump
 $(DMP)/%.dump: $(BIN)/%.riscv

@@ -1,0 +1,8 @@
+Your solution also solved it for me, thank you! For anyone that stumbles on the same problem in the future, you'll need to modify and regenerate the following ip's (in the fpga/xilinx folder):
+
+    xlnx_mig_7_ddr3: change the C0_S_AXI_ID_WIDTH in the mig_*.prj file(s).
+    xlnx_axi_clock_converter: change the CONFIG.ID_WIDTH in the tcl/run.tcl script.
+    xlnx_protocol_checker (if the protocol checker is enabled with the PROTOCOL_CHECKER define): change the CONFIG.ID_WIDTH in the tcl/run.tcl script.
+    xlnx_axi_dwidth_converter: change the CONFIG.SI_ID_WIDTH in the tcl/run.tcl script. This ip doesn't need to be changed for its current use cases, but it might be needed in the future.
+
+Maybe it would be a good idea to add a comment near the NBSlave value in fpga/src/ariane_xilinx.sv that mentions that you'll need to modify and regenerate the ip's if you change that value? In hindsight, this is very obvious, but it wasn't before. The fact that it's parameterized makes it seem as if no additional changes are required.

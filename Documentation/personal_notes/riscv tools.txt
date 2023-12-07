@@ -1,0 +1,9 @@
+In order to install the riscv tools necessary for compiling
+
+1. Modify the setup.sh script inside cva6 /ci folder
+(Put /opt/riscv instead of the $RISCV variable)
+(Put the name of the tar.gz file instead of the RISCV64_UNKNOWN_ELF_GCC variable)
+
+2. run sudo ./ci/setup.sh from the cva6 folder (All tools will be installed in /opt/riscv)
+
+

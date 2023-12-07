@@ -1,0 +1,12 @@
+vivado partial reconfiguration doesnt like structs and vectors on inputs/outputs of the reconfigurable partition
+
+remove if statement for cache subsystem in order for the genblk3. prefix to disappear, which causes opt ERROR.
+
+signals on all reconfigurable modules should have the same size
+
+because associativity changes (ways) the miss_vld_Bits signals cant be used in dcache. Same for the 2 .way signals that connect the dcache with the mem (But those signals arent used anyways).
+Remove the miss_vld_bits, mem_data_i_inv_way, mem_data_o_way signals from the dcache 
+
+partial reocnfiguration for cache - 400.000 cycles ~= 8ms
+time for 1 iteration of attack - 1.000.000 cycles ~= 20ms
+time for complete attack (200 iterations) - 200.000.000 cycles ~= 4s

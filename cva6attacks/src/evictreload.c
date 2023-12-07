@@ -152,7 +152,7 @@ void read_sets(){
 	for(i = 0 ; i < cache_size ; i++){
 		int way = i/256;
 		int set = i - (way*256);
-		if(hit[i] > 70){
+		if(hit[i] > 75){
 			//printf("Index %d, Cache way %d, Set %d got loaded %d times\n",i,way,set,hit[i]);
 			loaded_ways[set]++;
 			hits++;
@@ -184,14 +184,21 @@ void read_sets(){
 
 int main(){
 
+	register unsigned long start_cnt,end_cnt,diff_cnt;
+	asm volatile ("rdcycle %0" : "=r" (start_cnt));
 	//run the attack iterations number times
 	for (int i = 0 ; i < iterations ; i ++){
 		evictcache();		//evict the cache
 		victim();			//let the victim execute
 		reload(sharedarray);		//reload the array to find which sets got loaded into the cache
 	}
+	asm volatile ("rdcycle %0" : "=r" (end_cnt));
+	diff_cnt = end_cnt - start_cnt;
+
 
 	read_sets();
+
+	printf("Time to run attack is %d\n",diff_cnt);
 
 
 	return 0;
