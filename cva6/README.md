@@ -1,9 +1,10 @@
-## This folder contains all folders and components necessary to run the modified CVA6 RISC-V CPU on the Genesys 2 board.
+### This folder contains all folders and components necessary to run the modified CVA6 RISC-V CPU on the Genesys 2 board.
 
-cva6 folder contains the source code. Open /cva6/corev_apu/fpga/ariane_gui.xpr in Vivado to open the project. From there you can run synthesis and generate bitstreams. (CVA6 source code is from commit 24841d307b77a6031f64377cb184dc8157902739 of Fri May 12 19:13:15 2023)
+cva6 folder contains the source code. Open `/cva6/corev_apu/fpga/ariane_gui.xpr` in Vivado to open the project. From there you can run synthesis and generate bitstreams.\ 
+(CVA6 source code is from commit `24841d307b77a6031f64377cb184dc8157902739` of Fri May 12 19:13:15 2023)
 
 gen_bins.tcl script takes the generated partial bitstreams and converts them into binary files formatted for the ICAP port.\
-Run `source gen_bin.tcl` with vivado and copy the 2 generated partial bistream .bin files to the cva6-sdk folder.
+Run `source gen_bin.tcl` with vivado to generate the 2 partial bitstreams.
 
 ## Writing the generated partial bitstreams to an SD card.
 Clone the cva6-sdk git repository `git clone https://github.com/openhwgroup/cva6-sdk`\
