@@ -1,0 +1,3 @@
+[submodule "cva6/cva6-sdk"]
+	path = cva6/cva6-sdk
+	url = https://github.com/openhwgroup/cva6-sdk
