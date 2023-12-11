@@ -1,0 +1,6 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../home/askyvalos/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../ariane_gui.gen/sources_1/ip/csr_ila/hdl/verilog"
+xpm_fifo.sv,systemverilog,xpm,../../../../../home/askyvalos/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv,incdir="../../../../ariane_gui.gen/sources_1/ip/csr_ila/hdl/verilog"
+xpm_memory.sv,systemverilog,xpm,../../../../../home/askyvalos/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../ariane_gui.gen/sources_1/ip/csr_ila/hdl/verilog"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../home/askyvalos/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../ariane_gui.gen/sources_1/ip/csr_ila/hdl/verilog"
+csr_ila.v,verilog,xil_defaultlib,../../../../ariane_gui.gen/sources_1/ip/csr_ila/sim/csr_ila.v,incdir="../../../../ariane_gui.gen/sources_1/ip/csr_ila/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

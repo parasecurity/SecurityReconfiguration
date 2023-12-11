@@ -1,0 +1,1 @@
+vopt -64 +acc=npr -l elaborate.log  -L xil_defaultlib -L xpm -L axis_infrastructure_v1_1_0 -L axis_register_slice_v1_1_27 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_27 -L dfx_decoupler_v1_0_5 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.dfx_decoupler xil_defaultlib.glbl -o dfx_decoupler_opt

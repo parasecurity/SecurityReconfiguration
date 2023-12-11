@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_decoupler/dfx_decoupler_dfx_decoupler.vhd" \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_decoupler/sim/dfx_decoupler.vhd" \
+
+nosort

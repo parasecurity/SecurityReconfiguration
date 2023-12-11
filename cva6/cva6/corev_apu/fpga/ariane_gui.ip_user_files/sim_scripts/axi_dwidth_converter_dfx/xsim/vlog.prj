@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../ipstatic/hdl" \
+"../../../../ariane_gui.gen/sources_1/ip/axi_dwidth_converter_dfx/sim/axi_dwidth_converter_dfx.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

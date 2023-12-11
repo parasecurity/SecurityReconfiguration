@@ -1,0 +1,2 @@
+xlnx_axi_clock_converter.v,verilog,xil_defaultlib,../../../../xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/sim/xlnx_axi_clock_converter.v,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../../xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

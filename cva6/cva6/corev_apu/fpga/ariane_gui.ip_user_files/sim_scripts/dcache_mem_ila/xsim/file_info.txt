@@ -1,0 +1,2 @@
+dcache_mem_ila.v,verilog,xil_defaultlib,../../../../ariane_gui.gen/sources_1/ip/dcache_mem_ila/sim/dcache_mem_ila.v,incdir="../../../../ariane_gui.gen/sources_1/ip/dcache_mem_ila/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

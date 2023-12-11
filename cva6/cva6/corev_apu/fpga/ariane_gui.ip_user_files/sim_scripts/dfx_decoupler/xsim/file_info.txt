@@ -1,0 +1,3 @@
+dfx_decoupler_dfx_decoupler.vhd,vhdl,xil_defaultlib,../../../../ariane_gui.gen/sources_1/ip/dfx_decoupler/dfx_decoupler_dfx_decoupler.vhd,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+dfx_decoupler.vhd,vhdl,xil_defaultlib,../../../../ariane_gui.gen/sources_1/ip/dfx_decoupler/sim/dfx_decoupler.vhd,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

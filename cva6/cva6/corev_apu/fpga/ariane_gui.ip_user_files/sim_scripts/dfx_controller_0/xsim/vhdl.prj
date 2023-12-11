@@ -1,0 +1,9 @@
+vhdl xil_defaultlib  \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_controller_0/dfx_controller_dfx_controller_0_table_pkg.vhd" \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_controller_0/dfx_controller_dfx_controller_0_vsm_dcache.vhd" \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_controller_0/dfx_controller_dfx_controller_0_fetch.vhd" \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_controller_0/dfx_controller_dfx_controller_0_icap_if_0.vhd" \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_controller_0/dfx_controller_dfx_controller_0.vhd" \
+"../../../../ariane_gui.gen/sources_1/ip/dfx_controller_0/sim/dfx_controller_0.vhd" \
+
+nosort

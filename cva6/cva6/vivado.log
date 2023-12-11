@@ -1,0 +1,112 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 27 17:58:34 2023
+# Process ID: 983086
+# Current directory: /home/askyvalos/cva6
+# Command line: vivado -mode gui
+# Log file: /home/askyvalos/cva6/vivado.log
+# Journal file: /home/askyvalos/cva6/vivado.jou
+# Running On: tom-tom, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 135006 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/askyvalos/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /home/askyvalos/cva6/corev_apu/fpga/ariane_gui.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/askyvalos/cva6/corev_apu/fpga/ariane_gui.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/askyvalos/Vivado/2022.2/data/ip'.
+update_compile_order -fileset sources_1
+set_property PR_FLOW 1 [current_project] 
+create_partition_def -name dcache -module wt_dcache
+create_reconfig_module -name wt_dcache -partition_def [get_partition_defs dcache ]  -define_from wt_dcache
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/corev_apu/fpga/src/genesysii.svh' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/include/common_cells/registers.svh' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/include/common_cells/registers.svh' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/corev_apu/fpga/src/genesysii.svh' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/fpga-support/rtl/AsyncDpRam.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/fpga-support/rtl/SyncSpRamBeNx64.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/cf_math_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/core/include/cv64a6_imafdc_sv39_config_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/core/include/riscv_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/core/include/ariane_dm_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/common/local/rvfi/rvfi_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/core/include/ariane_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/core/include/wt_cache_pkg.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Moving file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/exp_backoff.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/fifo_v3.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/lfsr.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/lzc.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/rr_arb_tree.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/common/local/util/sram.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Copying file '/home/askyvalos/cva6/common/local/util/tc_sram_fpga_wrapper.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Moving file '/home/askyvalos/cva6/core/cache_subsystem/wt_dcache_ctrl.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Moving file '/home/askyvalos/cva6/core/cache_subsystem/wt_dcache_mem.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Moving file '/home/askyvalos/cva6/core/cache_subsystem/wt_dcache_missunit.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Moving file '/home/askyvalos/cva6/core/cache_subsystem/wt_dcache_wbuffer.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+INFO: [Vivado 12-2924] Moving file '/home/askyvalos/cva6/core/cache_subsystem/wt_dcache.sv' from fileset 'sources_1' to fileset 'wt_dcache'.
+CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'wt_dcache'. Requested source '/home/askyvalos/cva6/vendor/pulp-platform/common_cells/include/common_cells/registers.svh' will not be added.
+CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'wt_dcache'. Requested source '/home/askyvalos/cva6/corev_apu/fpga/src/genesysii.svh' will not be added.
+create_reconfig_module: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 7170.652 ; gain = 7.000 ; free physical = 75467 ; free virtual = 122018
+update_compile_order -fileset wt_dcache
+create_pr_configuration -name config_1 -partitions [list i_ariane/i_cva6/genblk3.i_cache_subsystem/i_wt_dcache:wt_dcache ]
+set_property PR_CONFIGURATION config_1 [get_runs impl_1]
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ariane_peripherals' [/home/askyvalos/cva6/corev_apu/fpga/src/ariane_peripherals_xilinx.sv:16]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_TYPEDEF_ALL' [/home/askyvalos/cva6/corev_apu/fpga/src/ariane_xilinx.sv:164]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/home/askyvalos/cva6/corev_apu/fpga/src/ariane_xilinx.sv:164]
+WARNING: [filemgmt 20-644] Circular Reference Found: '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:0] -->> '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:19]
+WARNING: [filemgmt 20-644] Circular Reference Found: '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:0] -->> '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:19]
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ariane_peripherals()' found in library 'xil_defaultlib'
+Duplicate found at line 15 of file /home/askyvalos/cva6/corev_apu/tb/ariane_peripherals.sv
+	(Active) Duplicate found at line 16 of file /home/askyvalos/cva6/corev_apu/fpga/src/ariane_peripherals_xilinx.sv
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.srcs/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.srcs/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.srcs/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.srcs/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.srcs/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.srcs/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.srcs/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.srcs/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi.xci' is already up-to-date
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Aug 27 18:04:48 2023] Launched wt_dcache_synth_1...
+Run output will be captured here: /home/askyvalos/cva6/corev_apu/fpga/ariane_gui.runs/wt_dcache_synth_1/runme.log
+[Sun Aug 27 18:04:48 2023] Launched synth_1...
+Run output will be captured here: /home/askyvalos/cva6/corev_apu/fpga/ariane_gui.runs/synth_1/runme.log
+reset_run wt_dcache_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+WARNING: [HDL 9-3756] overwriting previous definition of module 'ariane_peripherals' [/home/askyvalos/cva6/corev_apu/fpga/src/ariane_peripherals_xilinx.sv:16]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_TYPEDEF_ALL' [/home/askyvalos/cva6/corev_apu/fpga/src/ariane_xilinx.sv:164]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/home/askyvalos/cva6/corev_apu/fpga/src/ariane_xilinx.sv:164]
+WARNING: [filemgmt 20-644] Circular Reference Found: '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:0] -->> '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:19]
+WARNING: [filemgmt 20-644] Circular Reference Found: '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:0] -->> '.xil_defaultlib.popcount' [/home/askyvalos/cva6/vendor/pulp-platform/common_cells/src/popcount.sv:19]
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'ariane_peripherals()' found in library 'xil_defaultlib'
+Duplicate found at line 15 of file /home/askyvalos/cva6/corev_apu/tb/ariane_peripherals.sv
+	(Active) Duplicate found at line 16 of file /home/askyvalos/cva6/corev_apu/fpga/src/ariane_peripherals_xilinx.sv
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.srcs/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.srcs/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.srcs/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.srcs/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.srcs/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.srcs/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.srcs/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.xci' is already up-to-date
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.srcs/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi.xci' is already up-to-date
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sun Aug 27 18:46:41 2023] Launched wt_dcache_synth_1...
+Run output will be captured here: /home/askyvalos/cva6/corev_apu/fpga/ariane_gui.runs/wt_dcache_synth_1/runme.log
+[Sun Aug 27 18:46:41 2023] Launched synth_1...
+Run output will be captured here: /home/askyvalos/cva6/corev_apu/fpga/ariane_gui.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 27 19:03:19 2023...

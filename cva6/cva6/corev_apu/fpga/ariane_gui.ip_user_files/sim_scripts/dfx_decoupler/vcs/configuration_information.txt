@@ -1,0 +1,1231 @@
+Core Configuration Properties
+=============================
+CONFIG.HAS_AXI_LITE                                                           0
+CONFIG.HAS_AXIS_CONTROL                                                       0
+CONFIG.HAS_AXIS_STATUS                                                        0
+CONFIG.HAS_SIGNAL_CONTROL                                                     1
+CONFIG.HAS_SIGNAL_STATUS                                                      0
+CONFIG.ALWAYS_HAVE_AXI_CLK                                                    0
+CONFIG.INTF.dcache_signals.VLNV                                               undef
+CONFIG.INTF.dcache_signals.MODE                                               master
+CONFIG.INTF.dcache_signals.CDC_STAGES                                         0
+CONFIG.INTF.dcache_signals.REGISTER                                           0
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.PRESENT                               1
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.DECOUPLED                             0
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.DECOUPLED_VALUE                       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.WIDTH                                 1
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.DIRECTION                             in
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.RESOURCE                              infer
+CONFIG.INTF.dcache_signals.SIGNAL.clk_i.MANAGEMENT                            auto
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.PRESENT                              1
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.DECOUPLED                            1
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.DECOUPLED_VALUE                      0x1
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.WIDTH                                1
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.DIRECTION                            in
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.RESOURCE                             infer
+CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.MANAGEMENT                           auto
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.PRESENT                            1
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.DECOUPLED                          1
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.DECOUPLED_VALUE                    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.WIDTH                              1
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.DIRECTION                          in
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.RESOURCE                           infer
+CONFIG.INTF.dcache_signals.SIGNAL.enable_i.MANAGEMENT                         auto
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.PRESENT                             1
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.DECOUPLED                           1
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.DECOUPLED_VALUE                     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.WIDTH                               1
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.DIRECTION                           in
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.RESOURCE                            infer
+CONFIG.INTF.dcache_signals.SIGNAL.flush_i.MANAGEMENT                          auto
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.PRESENT                         1
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.DECOUPLED                       1
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.DECOUPLED_VALUE                 0x0
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.WIDTH                           1
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.DIRECTION                       out
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.RESOURCE                        infer
+CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.MANAGEMENT                      auto
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.PRESENT                              1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.DECOUPLED                            1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.DECOUPLED_VALUE                      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.WIDTH                                1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.DIRECTION                            out
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.RESOURCE                             infer
+CONFIG.INTF.dcache_signals.SIGNAL.miss_o.MANAGEMENT                           auto
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.PRESENT                     1
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.DECOUPLED                   1
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.DECOUPLED_VALUE             0x0
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.WIDTH                       1
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.DIRECTION                   out
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.RESOURCE                    infer
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.MANAGEMENT                  auto
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.PRESENT                    1
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.DECOUPLED                  1
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.DECOUPLED_VALUE            0x0
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.WIDTH                      1
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.DIRECTION                  out
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.RESOURCE                   infer
+CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.MANAGEMENT                 auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.PRESENT                       1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.DECOUPLED                     1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.DECOUPLED_VALUE               0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.WIDTH                         1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.DIRECTION                     in
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.RESOURCE                      infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.MANAGEMENT                    auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.PRESENT                    1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.DECOUPLED                  1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.DECOUPLED_VALUE            0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.WIDTH                      4
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.DIRECTION                  in
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.RESOURCE                   infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.MANAGEMENT                 auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.WIDTH                        2
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.DIRECTION                    in
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.PRESENT                 1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.DECOUPLED               1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.DECOUPLED_VALUE         0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.WIDTH                   64
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.DIRECTION               in
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.RESOURCE                infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.MANAGEMENT              auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.PRESENT                 1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.DECOUPLED               1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.DECOUPLED_VALUE         0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.WIDTH                   64
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.DIRECTION               in
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.RESOURCE                infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.MANAGEMENT              auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.WIDTH                        1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.DIRECTION                    out
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.PRESENT                   1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.DECOUPLED                 1
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.DECOUPLED_VALUE           0x0
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.WIDTH                     64
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.DIRECTION                 out
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.RESOURCE                  infer
+CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.MANAGEMENT                auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.PRESENT          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.DECOUPLED        1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.DECOUPLED_VALUE  0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.WIDTH            12
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.DIRECTION        in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.RESOURCE         infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.MANAGEMENT       auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.PRESENT            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.DECOUPLED          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.DECOUPLED_VALUE    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.WIDTH              44
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.DIRECTION          in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.RESOURCE           infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.MANAGEMENT         auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.DIRECTION           in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.DIRECTION           in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.DIRECTION             in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.WIDTH                  1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.WIDTH                  8
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.PRESENT              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.DECOUPLED            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.DECOUPLED_VALUE      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.WIDTH                2
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.DIRECTION            in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.RESOURCE             infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.MANAGEMENT           auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.WIDTH                  1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.DIRECTION             in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.PRESENT              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.DECOUPLED            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.DECOUPLED_VALUE      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.WIDTH                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.DIRECTION            in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.RESOURCE             infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.MANAGEMENT           auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.DIRECTION             out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.PRESENT            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.DECOUPLED          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.DECOUPLED_VALUE    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.WIDTH              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.DIRECTION          out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.RESOURCE           infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.MANAGEMENT         auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.DIRECTION             out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.DIRECTION           out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.DIRECTION           out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.PRESENT          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.DECOUPLED        1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.DECOUPLED_VALUE  0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.WIDTH            12
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.DIRECTION        in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.RESOURCE         infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.MANAGEMENT       auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.PRESENT            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.DECOUPLED          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.DECOUPLED_VALUE    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.WIDTH              44
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.DIRECTION          in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.RESOURCE           infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.MANAGEMENT         auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.DIRECTION           in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.DIRECTION           in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.DIRECTION             in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.WIDTH                  1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.WIDTH                  8
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.PRESENT              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.DECOUPLED            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.DECOUPLED_VALUE      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.WIDTH                2
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.DIRECTION            in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.RESOURCE             infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.MANAGEMENT           auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.WIDTH                  1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.DIRECTION             in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.PRESENT              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.DECOUPLED            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.DECOUPLED_VALUE      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.WIDTH                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.DIRECTION            in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.RESOURCE             infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.MANAGEMENT           auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.DIRECTION             out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.PRESENT            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.DECOUPLED          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.DECOUPLED_VALUE    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.WIDTH              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.DIRECTION          out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.RESOURCE           infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.MANAGEMENT         auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.DIRECTION             out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.DIRECTION           out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.DIRECTION           out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.PRESENT          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.DECOUPLED        1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.DECOUPLED_VALUE  0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.WIDTH            12
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.DIRECTION        in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.RESOURCE         infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.MANAGEMENT       auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.PRESENT            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.DECOUPLED          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.DECOUPLED_VALUE    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.WIDTH              44
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.DIRECTION          in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.RESOURCE           infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.MANAGEMENT         auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.DIRECTION           in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.DIRECTION           in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.DIRECTION             in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.WIDTH                  1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.WIDTH                  8
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.PRESENT              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.DECOUPLED            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.DECOUPLED_VALUE      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.WIDTH                2
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.DIRECTION            in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.RESOURCE             infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.MANAGEMENT           auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.PRESENT                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.DECOUPLED              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.DECOUPLED_VALUE        0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.WIDTH                  1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.DIRECTION              in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.RESOURCE               infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.MANAGEMENT             auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.DIRECTION             in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.PRESENT              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.DECOUPLED            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.DECOUPLED_VALUE      0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.WIDTH                1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.DIRECTION            in
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.RESOURCE             infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.MANAGEMENT           auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.DIRECTION             out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.PRESENT            1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.DECOUPLED          1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.DECOUPLED_VALUE    0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.WIDTH              1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.DIRECTION          out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.RESOURCE           infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.MANAGEMENT         auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.PRESENT               1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.DECOUPLED             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.DECOUPLED_VALUE       0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.WIDTH                 1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.DIRECTION             out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.RESOURCE              infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.MANAGEMENT            auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.DIRECTION           out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.PRESENT             1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.DECOUPLED           1
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.DECOUPLED_VALUE     0x0
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.WIDTH               64
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.DIRECTION           out
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.RESOURCE            infer
+CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.MANAGEMENT          auto
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.PRESENT                   1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.DECOUPLED                 1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.DECOUPLED_VALUE           0x0
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.WIDTH                     8
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.DIRECTION                 out
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.RESOURCE                  infer
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.MANAGEMENT                auto
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.PRESENT                   1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.DECOUPLED                 1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.DECOUPLED_VALUE           0x0
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.WIDTH                     8
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.DIRECTION                 out
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.RESOURCE                  infer
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.MANAGEMENT                auto
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.PRESENT                   1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.DECOUPLED                 1
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.DECOUPLED_VALUE           0x0
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.WIDTH                     8
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.DIRECTION                 out
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.RESOURCE                  infer
+CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.MANAGEMENT                auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.WIDTH                        1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.DIRECTION                    in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.PRESENT                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.DECOUPLED                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.DECOUPLED_VALUE            0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.WIDTH                      3
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.DIRECTION                  in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.RESOURCE                   infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.MANAGEMENT                 auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.PRESENT                     1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.DECOUPLED                   1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.DECOUPLED_VALUE             0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.WIDTH                       128
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.DIRECTION                   in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.RESOURCE                    infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.MANAGEMENT                  auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.PRESENT                     1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.DECOUPLED                   1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.DECOUPLED_VALUE             0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.WIDTH                       128
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.DIRECTION                   in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.RESOURCE                    infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.MANAGEMENT                  auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.PRESENT                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.DECOUPLED                1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.DECOUPLED_VALUE          0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.WIDTH                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.DIRECTION                in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.RESOURCE                 infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.MANAGEMENT               auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.PRESENT                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.DECOUPLED                1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.DECOUPLED_VALUE          0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.WIDTH                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.DIRECTION                in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.RESOURCE                 infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.MANAGEMENT               auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.PRESENT                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.DECOUPLED                1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.DECOUPLED_VALUE          0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.WIDTH                    12
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.DIRECTION                in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.RESOURCE                 infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.MANAGEMENT               auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.PRESENT                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.DECOUPLED                1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.DECOUPLED_VALUE          0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.WIDTH                    3
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.DIRECTION                in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.RESOURCE                 infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.MANAGEMENT               auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.WIDTH                        2
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.DIRECTION                    in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.WIDTH                        1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.DIRECTION                    out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.WIDTH                        1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.DIRECTION                    in
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.PRESENT                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.DECOUPLED                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.DECOUPLED_VALUE            0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.WIDTH                      2
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.DIRECTION                  out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.RESOURCE                   infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.MANAGEMENT                 auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.PRESENT                     1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.DECOUPLED                   1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.DECOUPLED_VALUE             0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.WIDTH                       3
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.DIRECTION                   out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.RESOURCE                    infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.MANAGEMENT                  auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.WIDTH                        3
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.DIRECTION                    out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.PRESENT                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.DECOUPLED                  1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.DECOUPLED_VALUE            0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.WIDTH                      56
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.DIRECTION                  out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.RESOURCE                   infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.MANAGEMENT                 auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.PRESENT                     1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.DECOUPLED                   1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.DECOUPLED_VALUE             0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.WIDTH                       64
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.DIRECTION                   out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.RESOURCE                    infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.MANAGEMENT                  auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.PRESENT                     1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.DECOUPLED                   1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.DECOUPLED_VALUE             0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.WIDTH                       64
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.DIRECTION                   out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.RESOURCE                    infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.MANAGEMENT                  auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.PRESENT                       1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.DECOUPLED                     1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.DECOUPLED_VALUE               0x1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.WIDTH                         1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.DIRECTION                     out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.RESOURCE                      infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.MANAGEMENT                    auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.PRESENT                      1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.DECOUPLED                    1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.DECOUPLED_VALUE              0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.WIDTH                        2
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.DIRECTION                    out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.RESOURCE                     infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.MANAGEMENT                   auto
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.PRESENT                   1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.DECOUPLED                 1
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.DECOUPLED_VALUE           0x0
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.WIDTH                     4
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.DIRECTION                 out
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.RESOURCE                  infer
+CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.MANAGEMENT                auto
+
+
+dfx_decoupler_v1_0::set_property -dict [list \
+                               CONFIG.HAS_AXI_LITE                                                           0 \
+                               CONFIG.HAS_AXIS_CONTROL                                                       0 \
+                               CONFIG.HAS_AXIS_STATUS                                                        0 \
+                               CONFIG.HAS_SIGNAL_CONTROL                                                     1 \
+                               CONFIG.HAS_SIGNAL_STATUS                                                      0 \
+                               CONFIG.ALWAYS_HAVE_AXI_CLK                                                    0 \
+                               CONFIG.INTF.dcache_signals.VLNV                                               undef \
+                               CONFIG.INTF.dcache_signals.MODE                                               master \
+                               CONFIG.INTF.dcache_signals.CDC_STAGES                                         0 \
+                               CONFIG.INTF.dcache_signals.REGISTER                                           0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.PRESENT                               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.DECOUPLED                             0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.DECOUPLED_VALUE                       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.WIDTH                                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.DIRECTION                             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.RESOURCE                              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.clk_i.MANAGEMENT                            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.PRESENT                              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.DECOUPLED                            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.DECOUPLED_VALUE                      0x1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.WIDTH                                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.DIRECTION                            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.RESOURCE                             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.rst_ni.MANAGEMENT                           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.PRESENT                            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.DECOUPLED                          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.DECOUPLED_VALUE                    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.WIDTH                              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.DIRECTION                          in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.RESOURCE                           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.enable_i.MANAGEMENT                         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.PRESENT                             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.DECOUPLED                           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.DECOUPLED_VALUE                     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.WIDTH                               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.DIRECTION                           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.RESOURCE                            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_i.MANAGEMENT                          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.PRESENT                         1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.DECOUPLED                       1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.DECOUPLED_VALUE                 0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.WIDTH                           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.DIRECTION                       out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.RESOURCE                        infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.flush_ack_o.MANAGEMENT                      auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.PRESENT                              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.DECOUPLED                            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.DECOUPLED_VALUE                      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.WIDTH                                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.DIRECTION                            out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.RESOURCE                             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_o.MANAGEMENT                           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.PRESENT                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.DECOUPLED                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.DECOUPLED_VALUE             0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.WIDTH                       1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.DIRECTION                   out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.RESOURCE                    infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_empty_o.MANAGEMENT                  auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.PRESENT                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.DECOUPLED                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.DECOUPLED_VALUE            0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.WIDTH                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.DIRECTION                  out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.RESOURCE                   infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.wbuffer_not_ni_o.MANAGEMENT                 auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.PRESENT                       1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.DECOUPLED                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.DECOUPLED_VALUE               0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.WIDTH                         1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.DIRECTION                     in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.RESOURCE                      infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_req.MANAGEMENT                    auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.PRESENT                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.DECOUPLED                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.DECOUPLED_VALUE            0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.WIDTH                      4 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.DIRECTION                  in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.RESOURCE                   infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_amo_op.MANAGEMENT                 auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.WIDTH                        2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.DIRECTION                    in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_size.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.PRESENT                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.DECOUPLED               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.DECOUPLED_VALUE         0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.WIDTH                   64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.DIRECTION               in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.RESOURCE                infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_a.MANAGEMENT              auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.PRESENT                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.DECOUPLED               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.DECOUPLED_VALUE         0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.WIDTH                   64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.DIRECTION               in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.RESOURCE                infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_req_i_operand_b.MANAGEMENT              auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.WIDTH                        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.DIRECTION                    out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_ack.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.PRESENT                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.DECOUPLED                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.DECOUPLED_VALUE           0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.WIDTH                     64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.DIRECTION                 out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.RESOURCE                  infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.amo_resp_o_result.MANAGEMENT                auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.PRESENT          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.DECOUPLED        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.DECOUPLED_VALUE  0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.WIDTH            12 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.DIRECTION        in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.RESOURCE         infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index1.MANAGEMENT       auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.PRESENT            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.DECOUPLED          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.WIDTH              44 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.DIRECTION          in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.RESOURCE           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag1.MANAGEMENT         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.DIRECTION           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata1.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.DIRECTION           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser1.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.DIRECTION             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req1.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.WIDTH                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we1.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.WIDTH                  8 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be1.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.PRESENT              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.DECOUPLED            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.DECOUPLED_VALUE      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.WIDTH                2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.DIRECTION            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.RESOURCE             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size1.MANAGEMENT           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.WIDTH                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id1.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.DIRECTION             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req1.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.PRESENT              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.DECOUPLED            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.DECOUPLED_VALUE      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.WIDTH                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.DIRECTION            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.RESOURCE             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid1.MANAGEMENT           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.DIRECTION             out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt1.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.PRESENT            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.DECOUPLED          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.WIDTH              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.DIRECTION          out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.RESOURCE           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid1.MANAGEMENT         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.DIRECTION             out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid1.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.DIRECTION           out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata1.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.DIRECTION           out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser1.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.PRESENT          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.DECOUPLED        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.DECOUPLED_VALUE  0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.WIDTH            12 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.DIRECTION        in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.RESOURCE         infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index2.MANAGEMENT       auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.PRESENT            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.DECOUPLED          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.WIDTH              44 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.DIRECTION          in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.RESOURCE           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag2.MANAGEMENT         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.DIRECTION           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata2.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.DIRECTION           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser2.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.DIRECTION             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req2.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.WIDTH                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we2.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.WIDTH                  8 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be2.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.PRESENT              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.DECOUPLED            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.DECOUPLED_VALUE      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.WIDTH                2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.DIRECTION            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.RESOURCE             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size2.MANAGEMENT           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.WIDTH                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id2.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.DIRECTION             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req2.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.PRESENT              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.DECOUPLED            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.DECOUPLED_VALUE      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.WIDTH                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.DIRECTION            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.RESOURCE             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid2.MANAGEMENT           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.DIRECTION             out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt2.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.PRESENT            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.DECOUPLED          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.WIDTH              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.DIRECTION          out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.RESOURCE           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid2.MANAGEMENT         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.DIRECTION             out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid2.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.DIRECTION           out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata2.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.DIRECTION           out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser2.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.PRESENT          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.DECOUPLED        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.DECOUPLED_VALUE  0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.WIDTH            12 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.DIRECTION        in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.RESOURCE         infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_index3.MANAGEMENT       auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.PRESENT            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.DECOUPLED          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.WIDTH              44 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.DIRECTION          in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.RESOURCE           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_address_tag3.MANAGEMENT         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.DIRECTION           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wdata3.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.DIRECTION           in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_wuser3.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.DIRECTION             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_req3.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.WIDTH                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_we3.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.WIDTH                  8 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_be3.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.PRESENT              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.DECOUPLED            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.DECOUPLED_VALUE      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.WIDTH                2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.DIRECTION            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.RESOURCE             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_size3.MANAGEMENT           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.PRESENT                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.DECOUPLED              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.DECOUPLED_VALUE        0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.WIDTH                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.DIRECTION              in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.RESOURCE               infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_data_id3.MANAGEMENT             auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.DIRECTION             in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_kill_req3.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.PRESENT              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.DECOUPLED            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.DECOUPLED_VALUE      0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.WIDTH                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.DIRECTION            in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.RESOURCE             infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_i_tag_valid3.MANAGEMENT           auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.DIRECTION             out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_gnt3.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.PRESENT            1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.DECOUPLED          1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.WIDTH              1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.DIRECTION          out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.RESOURCE           infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rvalid3.MANAGEMENT         auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.PRESENT               1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.DECOUPLED             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.DECOUPLED_VALUE       0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.WIDTH                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.DIRECTION             out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.RESOURCE              infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rid3.MANAGEMENT            auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.DIRECTION           out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_rdata3.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.PRESENT             1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.DECOUPLED           1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.DECOUPLED_VALUE     0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.WIDTH               64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.DIRECTION           out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.RESOURCE            infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.req_ports_o_data_ruser3.MANAGEMENT          auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.PRESENT                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.DECOUPLED                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.DECOUPLED_VALUE           0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.WIDTH                     8 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.DIRECTION                 out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.RESOURCE                  infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_1.MANAGEMENT                auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.PRESENT                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.DECOUPLED                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.DECOUPLED_VALUE           0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.WIDTH                     8 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.DIRECTION                 out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.RESOURCE                  infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_2.MANAGEMENT                auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.PRESENT                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.DECOUPLED                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.DECOUPLED_VALUE           0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.WIDTH                     8 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.DIRECTION                 out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.RESOURCE                  infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.miss_vld_bits_o_3.MANAGEMENT                auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.WIDTH                        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.DIRECTION                    in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_vld_i.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.PRESENT                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.DECOUPLED                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.DECOUPLED_VALUE            0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.WIDTH                      3 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.DIRECTION                  in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.RESOURCE                   infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_rtype.MANAGEMENT                 auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.PRESENT                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.DECOUPLED                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.DECOUPLED_VALUE             0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.WIDTH                       128 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.DIRECTION                   in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.RESOURCE                    infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_data.MANAGEMENT                  auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.PRESENT                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.DECOUPLED                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.DECOUPLED_VALUE             0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.WIDTH                       128 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.DIRECTION                   in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.RESOURCE                    infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_user.MANAGEMENT                  auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.PRESENT                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.DECOUPLED                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.DECOUPLED_VALUE          0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.WIDTH                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.DIRECTION                in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.RESOURCE                 infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_vld.MANAGEMENT               auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.PRESENT                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.DECOUPLED                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.DECOUPLED_VALUE          0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.WIDTH                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.DIRECTION                in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.RESOURCE                 infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_all.MANAGEMENT               auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.PRESENT                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.DECOUPLED                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.DECOUPLED_VALUE          0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.WIDTH                    12 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.DIRECTION                in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.RESOURCE                 infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_idx.MANAGEMENT               auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.PRESENT                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.DECOUPLED                1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.DECOUPLED_VALUE          0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.WIDTH                    3 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.DIRECTION                in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.RESOURCE                 infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_inv_way.MANAGEMENT               auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.WIDTH                        2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.DIRECTION                    in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_rtrn_i_tid.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.WIDTH                        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.DIRECTION                    out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_req_o.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.WIDTH                        1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.DIRECTION                    in \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_ack_i.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.PRESENT                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.DECOUPLED                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.DECOUPLED_VALUE            0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.WIDTH                      2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.DIRECTION                  out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.RESOURCE                   infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_rtype.MANAGEMENT                 auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.PRESENT                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.DECOUPLED                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.DECOUPLED_VALUE             0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.WIDTH                       3 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.DIRECTION                   out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.RESOURCE                    infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_size.MANAGEMENT                  auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.WIDTH                        3 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.DIRECTION                    out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_way.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.PRESENT                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.DECOUPLED                  1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.DECOUPLED_VALUE            0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.WIDTH                      56 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.DIRECTION                  out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.RESOURCE                   infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_paddr.MANAGEMENT                 auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.PRESENT                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.DECOUPLED                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.DECOUPLED_VALUE             0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.WIDTH                       64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.DIRECTION                   out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.RESOURCE                    infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_data.MANAGEMENT                  auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.PRESENT                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.DECOUPLED                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.DECOUPLED_VALUE             0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.WIDTH                       64 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.DIRECTION                   out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.RESOURCE                    infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_user.MANAGEMENT                  auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.PRESENT                       1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.DECOUPLED                     1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.DECOUPLED_VALUE               0x1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.WIDTH                         1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.DIRECTION                     out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.RESOURCE                      infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_nc.MANAGEMENT                    auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.PRESENT                      1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.DECOUPLED                    1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.DECOUPLED_VALUE              0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.WIDTH                        2 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.DIRECTION                    out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.RESOURCE                     infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_tid.MANAGEMENT                   auto \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.PRESENT                   1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.DECOUPLED                 1 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.DECOUPLED_VALUE           0x0 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.WIDTH                     4 \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.DIRECTION                 out \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.RESOURCE                  infer \
+                               CONFIG.INTF.dcache_signals.SIGNAL.mem_data_o_amo_op.MANAGEMENT                auto \
+] [get_ips dfx_decoupler]
+

@@ -1,0 +1,2 @@
+req_ports_ila.v,verilog,xil_defaultlib,../../../../ariane_gui.gen/sources_1/ip/req_ports_ila/sim/req_ports_ila.v,incdir="../../../../ariane_gui.gen/sources_1/ip/req_ports_ila/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 27 17:58:34 2023
+# Process ID: 983086
+# Current directory: /home/askyvalos/cva6
+# Command line: vivado -mode gui
+# Log file: /home/askyvalos/cva6/vivado.log
+# Journal file: /home/askyvalos/cva6/vivado.jou
+# Running On: tom-tom, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 135006 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/askyvalos/cva6/corev_apu/fpga/ariane_gui.xpr
+update_compile_order -fileset sources_1
+set_property PR_FLOW 1 [current_project] 
+create_partition_def -name dcache -module wt_dcache
+create_reconfig_module -name wt_dcache -partition_def [get_partition_defs dcache ]  -define_from wt_dcache
+update_compile_order -fileset wt_dcache
+create_pr_configuration -name config_1 -partitions [list i_ariane/i_cva6/genblk3.i_cache_subsystem/i_wt_dcache:wt_dcache ]
+set_property PR_CONFIGURATION config_1 [get_runs impl_1]
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run wt_dcache_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1

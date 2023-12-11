@@ -1,0 +1,111 @@
+Core Configuration Properties
+=============================
+CONFIG.HAS_AXI_LITE_IF                          0
+CONFIG.RESET_ACTIVE_LEVEL                       0
+CONFIG.CP_FIFO_DEPTH                            32
+CONFIG.CP_FIFO_TYPE                             lutram
+CONFIG.CP_ARBITRATION_PROTOCOL                  0
+CONFIG.CP_COMPRESSION                           0
+CONFIG.CP_FAMILY                                7series
+CONFIG.CDC_STAGES                               6
+CONFIG.VS.dcache.START_IN_SHUTDOWN              0
+CONFIG.VS.dcache.NUM_TRIGGERS_ALLOCATED         2
+CONFIG.VS.dcache.NUM_RMS_ALLOCATED              2
+CONFIG.VS.dcache.NUM_HW_TRIGGERS                2
+CONFIG.VS.dcache.SHUTDOWN_ON_ERROR              1
+CONFIG.VS.dcache.HAS_AXIS_STATUS                0
+CONFIG.VS.dcache.HAS_AXIS_CONTROL               0
+CONFIG.VS.dcache.HAS_POR_RM                     1
+CONFIG.VS.dcache.POR_RM                         dcache_1
+CONFIG.VS.dcache.SKIP_RM_STARTUP_AFTER_RESET    0
+CONFIG.VS.dcache.TRIGGER0_TO_RM                 dcache_1
+CONFIG.VS.dcache.TRIGGER1_TO_RM                 dcache_2
+CONFIG.VS.dcache.RM.dcache_1.SHUTDOWN_REQUIRED  hw
+CONFIG.VS.dcache.RM.dcache_1.STARTUP_REQUIRED   no
+CONFIG.VS.dcache.RM.dcache_1.RESET_REQUIRED     high
+CONFIG.VS.dcache.RM.dcache_1.RESET_DURATION     15
+CONFIG.VS.dcache.RM.dcache_1.BS.0.ADDRESS       2499805184
+CONFIG.VS.dcache.RM.dcache_1.BS.0.SIZE          1525148
+CONFIG.VS.dcache.RM.dcache_1.BS.0.CLEAR         0
+CONFIG.VS.dcache.RM.dcache_2.SHUTDOWN_REQUIRED  hw
+CONFIG.VS.dcache.RM.dcache_2.STARTUP_REQUIRED   no
+CONFIG.VS.dcache.RM.dcache_2.RESET_REQUIRED     high
+CONFIG.VS.dcache.RM.dcache_2.RESET_DURATION     15
+CONFIG.VS.dcache.RM.dcache_2.BS.0.ADDRESS       2533359616
+CONFIG.VS.dcache.RM.dcache_2.BS.0.SIZE          1525148
+CONFIG.VS.dcache.RM.dcache_2.BS.0.CLEAR         0
+
+
+dfx_controller_v1_0::set_property -dict [list \
+                               CONFIG.HAS_AXI_LITE_IF                          0 \
+                               CONFIG.RESET_ACTIVE_LEVEL                       0 \
+                               CONFIG.CP_FIFO_DEPTH                            32 \
+                               CONFIG.CP_FIFO_TYPE                             lutram \
+                               CONFIG.CP_ARBITRATION_PROTOCOL                  0 \
+                               CONFIG.CP_COMPRESSION                           0 \
+                               CONFIG.CP_FAMILY                                7series \
+                               CONFIG.CDC_STAGES                               6 \
+                               CONFIG.VS.dcache.START_IN_SHUTDOWN              0 \
+                               CONFIG.VS.dcache.NUM_TRIGGERS_ALLOCATED         2 \
+                               CONFIG.VS.dcache.NUM_RMS_ALLOCATED              2 \
+                               CONFIG.VS.dcache.NUM_HW_TRIGGERS                2 \
+                               CONFIG.VS.dcache.SHUTDOWN_ON_ERROR              1 \
+                               CONFIG.VS.dcache.HAS_AXIS_STATUS                0 \
+                               CONFIG.VS.dcache.HAS_AXIS_CONTROL               0 \
+                               CONFIG.VS.dcache.HAS_POR_RM                     1 \
+                               CONFIG.VS.dcache.POR_RM                         dcache_1 \
+                               CONFIG.VS.dcache.SKIP_RM_STARTUP_AFTER_RESET    0 \
+                               CONFIG.VS.dcache.TRIGGER0_TO_RM                 dcache_1 \
+                               CONFIG.VS.dcache.TRIGGER1_TO_RM                 dcache_2 \
+                               CONFIG.VS.dcache.RM.dcache_1.SHUTDOWN_REQUIRED  hw \
+                               CONFIG.VS.dcache.RM.dcache_1.STARTUP_REQUIRED   no \
+                               CONFIG.VS.dcache.RM.dcache_1.RESET_REQUIRED     high \
+                               CONFIG.VS.dcache.RM.dcache_1.RESET_DURATION     15 \
+                               CONFIG.VS.dcache.RM.dcache_1.BS.0.ADDRESS       2499805184 \
+                               CONFIG.VS.dcache.RM.dcache_1.BS.0.SIZE          1525148 \
+                               CONFIG.VS.dcache.RM.dcache_1.BS.0.CLEAR         0 \
+                               CONFIG.VS.dcache.RM.dcache_2.SHUTDOWN_REQUIRED  hw \
+                               CONFIG.VS.dcache.RM.dcache_2.STARTUP_REQUIRED   no \
+                               CONFIG.VS.dcache.RM.dcache_2.RESET_REQUIRED     high \
+                               CONFIG.VS.dcache.RM.dcache_2.RESET_DURATION     15 \
+                               CONFIG.VS.dcache.RM.dcache_2.BS.0.ADDRESS       2533359616 \
+                               CONFIG.VS.dcache.RM.dcache_2.BS.0.SIZE          1525148 \
+                               CONFIG.VS.dcache.RM.dcache_2.BS.0.CLEAR         0 \
+                             ] [get_ips dfx_controller_0]
+
+ID Mapping
+=============================
+Virtual Socket Manager dcache is assigned ID 0
+  Reconfigurable Module dcache_1 is assigned ID 0
+  Reconfigurable Module dcache_2 is assigned ID 1
+
+
+Address Structure
+=============================
+The addresses are structured as follows:
+  There is no VSM Select slice as there's only one VSM
+  address[ 6: 5]  : Selects the Register Bank
+  address[ 4: 2]  : Selects the Register within the bank
+
+Address Map
+=============================
+| Virtual Socket Manager | Register     | Address |
++------------------------+--------------+---------+
+| dcache                 | STATUS       | 0X00000 |
+| dcache                 | CONTROL      | 0X00000 |
+| dcache                 | SW_TRIGGER   | 0X00004 |
+| dcache                 | TRIGGER0     | 0X00020 |
+| dcache                 | TRIGGER1     | 0X00024 |
+| dcache                 | RM_BS_INDEX0 | 0X00040 |
+| dcache                 | RM_CONTROL0  | 0X00044 |
+| dcache                 | RM_BS_INDEX1 | 0X00048 |
+| dcache                 | RM_CONTROL1  | 0X0004C |
+| dcache                 | BS_ID0       | 0X00060 |
+| dcache                 | BS_ADDRESS0  | 0X00064 |
+| dcache                 | BS_SIZE0     | 0X00068 |
+| dcache                 | BS_ID1       | 0X00070 |
+| dcache                 | BS_ADDRESS1  | 0X00074 |
+| dcache                 | BS_SIZE1     | 0X00078 |
+
+
+
