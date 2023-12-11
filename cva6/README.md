@@ -5,6 +5,9 @@ cva6 folder contains the source code. Open /cva6/corev_apu/fpga/ariane_gui.xpr i
 gen_bins.tcl script takes the generated partial bitstreams and converts them into binary files formatted for the ICAP port.\
 Run `source gen_bin.tcl` with vivado and copy the 2 generated partial bistream .bin files to the cva6-sdk folder.
 
+## Writing the generated partial bitstreams to an SD card.
+Clone the cva6-sdk git repository `git clone https://github.com/openhwgroup/cva6-sdk`\
+Replace the makefile in the created repo with our own makefile located in this folder\
 cva6-sdk contains the linux image and bootloader that are written to the sd card.\
 We have modified the makefile so that it writes the 2 partial bitstreams into the sd card aswell.\
 Go into the cva6-sdk folder and run `git submodule update --init --recursive`.\

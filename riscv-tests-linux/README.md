@@ -9,5 +9,5 @@ Modified makefile by changing riscv cross-compiler and removing uneccessary flag
 
 **Important** : you have to specify the folder in which the buildroot cross-compiler is located, in the makefile. (e.g. buildoort_dir = /home/$user/cva6-sdk/buildroot/output/host/bin/)
 
-`make all`, to compile the benchmarks\
+`make all` to compile the benchmarks\
 `make clean` to remove
