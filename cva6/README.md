@@ -26,3 +26,6 @@ After CVA6 has finished loading linux go to /etc/ssh. Run `vi sshd_config` to op
 To set up ethernet run `ifup eth0`. It will automatically assign an ip address to CVA6 (usually 192.168.1.20).\
 Finally run `passwd` to set up a new passwd.\
 Now you can connect to CVA6 through ssh by running ssh root@192.168.1.20 and entering the password you created.
+
+
+Vivado reports folder contains timing and utilization reports on the cva6 SoC before and after our modifications.
