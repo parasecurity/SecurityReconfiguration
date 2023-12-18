@@ -1,0 +1,292 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Aug 27 17:53:04 2023
+# Process ID: 982459
+# Current directory: /home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1
+# Command line: vivado -log xlnx_clk_gen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source xlnx_clk_gen.tcl
+# Log file: /home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/xlnx_clk_gen.vds
+# Journal file: /home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/vivado.jou
+# Running On: tom-tom, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 135006 MB
+#-----------------------------------------------------------
+source xlnx_clk_gen.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: xlnx_clk_gen
+Command: synth_design -top xlnx_clk_gen -part xc7k325tffg900-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-1540] The version limit for your license is '2023.03' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 982466
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/askyvalos/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2497.844 ; gain = 369.801 ; free physical = 73702 ; free virtual = 120342
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3462.785; parent = 2500.816; children = 961.969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'xlnx_clk_gen' [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.v:71]
+INFO: [Synth 8-6157] synthesizing module 'xlnx_clk_gen_clk_wiz' [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_clk_wiz.v:71]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [/home/askyvalos/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71326]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [/home/askyvalos/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71326]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/home/askyvalos/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 20.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 90.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 20 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/home/askyvalos/Vivado/2022.2/scripts/rt/data/unisim_comp.v:79852]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/askyvalos/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/home/askyvalos/Vivado/2022.2/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'xlnx_clk_gen_clk_wiz' (0#1) [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_clk_wiz.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'xlnx_clk_gen' (0#1) [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2573.781 ; gain = 445.738 ; free physical = 73787 ; free virtual = 120427
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3535.754; parent = 2573.785; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2588.625 ; gain = 460.582 ; free physical = 73786 ; free virtual = 120427
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3550.598; parent = 2588.629; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2588.625 ; gain = 460.582 ; free physical = 73786 ; free virtual = 120427
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3550.598; parent = 2588.629; children = 961.969
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2594.562 ; gain = 0.000 ; free physical = 73777 ; free virtual = 120417
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_board.xdc] for cell 'inst'
+Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/xlnx_clk_gen_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/xlnx_clk_gen_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.531 ; gain = 0.000 ; free physical = 73699 ; free virtual = 120339
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2665.531 ; gain = 0.000 ; free physical = 73699 ; free virtual = 120339
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/askyvalos/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73764 ; free virtual = 120405
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73764 ; free virtual = 120405
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73764 ; free virtual = 120405
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73762 ; free virtual = 120403
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73761 ; free virtual = 120405
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1935.001; parent = 1724.826; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73649 ; free virtual = 120293
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2002.871; parent = 1793.335; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73649 ; free virtual = 120293
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2003.104; parent = 1793.573; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120285
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2003.818; parent = 1794.288; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2003.998; parent = 1794.468; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2004.061; parent = 1794.530; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2004.076; parent = 1794.546; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2004.092; parent = 1794.562; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2004.092; parent = 1794.562; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2004.107; parent = 1794.577; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     5|
+|2     |MMCME2_ADV |     1|
+|3     |IBUF       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73641 ; free virtual = 120286
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2004.170; parent = 1794.640; children = 210.175
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3595.488; parent = 2633.520; children = 961.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2665.531 ; gain = 460.582 ; free physical = 73694 ; free virtual = 120339
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2665.531 ; gain = 537.488 ; free physical = 73694 ; free virtual = 120339
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.531 ; gain = 0.000 ; free physical = 73692 ; free virtual = 120336
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2665.531 ; gain = 0.000 ; free physical = 73736 ; free virtual = 120381
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: cf558f76
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2665.531 ; gain = 901.414 ; free physical = 73931 ; free virtual = 120576
+INFO: [Common 17-1381] The checkpoint '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/xlnx_clk_gen.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP xlnx_clk_gen, cache-ID = fc0dcbef750ffa89
+INFO: [Common 17-1381] The checkpoint '/home/askyvalos/cva6/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.runs/xlnx_clk_gen_synth_1/xlnx_clk_gen.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file xlnx_clk_gen_utilization_synth.rpt -pb xlnx_clk_gen_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 27 17:53:28 2023...
