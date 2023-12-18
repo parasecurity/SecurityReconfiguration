@@ -1,14 +1,14 @@
 ### This folder contains all folders and components necessary to run the modified CVA6 RISC-V CPU on the Genesys 2 board.
 
-cva6 folder contains the source code. Open `/cva6/corev_apu/fpga/ariane_gui.xpr` in Vivado to open the project. From there you can run synthesis and generate bitstreams.\ 
-(CVA6 source code is from commit `24841d307b77a6031f64377cb184dc8157902739` of Fri May 12 19:13:15 2023)
+cva6 folder contains the source code. Open `/cva6/corev_apu/fpga/ariane_gui.xpr` in Vivado to open the project. From there you can run synthesis and generate bitstreams. (CVA6 source code is from commit `24841d307b77a6031f64377cb184dc8157902739` of Fri May 12 19:13:15 2023)
 
 gen_bins.tcl script takes the generated partial bitstreams and converts them into binary files formatted for the ICAP port.\
 Run `source gen_bin.tcl` with vivado to generate the 2 partial bitstreams.
 
 ## Writing the generated partial bitstreams to an SD card.
 Clone the cva6-sdk git repository `git clone https://github.com/openhwgroup/cva6-sdk`\
-Replace the makefile in the created repo with our own makefile located in this folder\
+Replace the makefile in the created repo with our own makefile located in this folder.\
+Copy the 2 generated partial bitstreams (.bin) into the cva6-sdk repo.\
 cva6-sdk contains the linux image and bootloader that are written to the sd card.\
 We have modified the makefile so that it writes the 2 partial bitstreams into the sd card aswell.\
 Go into the cva6-sdk folder and run `git submodule update --init --recursive`.\
@@ -20,7 +20,7 @@ Insert the sd card onto the Genesys 2 board and load the ariane_xilinx.bit bitst
 
 Bitstreams folder contains ready bitstreams for different type of reconfiguration periods. You can take the partial bitstreams from there and copy them to the cva6-sdk folder and write them to the SD card.
 
-## Setting up ssh connection on CVA6\
+## Setting up ssh connection on CVA6
 Connect to cva6 through uart (Open serial connection on /dev/ttyUSB0 with 115200 baudrate (u can use puTTY for this)).\
 After CVA6 has finished loading linux go to /etc/ssh. Run `vi sshd_config` to open the sshd configuration and modify the line #PermitRootLogin prohibit-password to PermitRootLogin yes (edit with i, :wq to save). Then go to /etc/init.d and run `./S50sshd restart`.\
 To set up ethernet run `ifup eth0`. It will automatically assign an ip address to CVA6 (usually 192.168.1.20).\

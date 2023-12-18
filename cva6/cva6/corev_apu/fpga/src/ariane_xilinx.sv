@@ -900,15 +900,6 @@ always @(posedge clk) begin
         cycle_calls_q <= cycle_calls_n;
 end        
 
-btn_ila my_ila (
-    .clk(clk),
-    .probe0(vsm_dcache_hw_triggers),
-    .probe1(num_reconf),
-    .probe2(cycle_calls_q),
-    .probe3(partial_timer),
-    .probe4(partial_id)
-);
-
 // ICAP interface
 ICAPE2#(
 		.DEVICE_ID(32'h3651093),          //Device ID code for Kintex-7 XC7K325T-2FFG900C
