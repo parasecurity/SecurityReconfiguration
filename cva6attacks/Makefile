@@ -21,7 +21,7 @@ DEPFLAGS=-MT $@ -MMD -MP -MF $(DEP)/$*.d
 RM=rm -rf
 
 # Programs to compile
-PROGRAMS=primeprobe evictreload printest primeprobe2
+PROGRAMS=primeprobe evictreload
 BINS=$(addprefix $(BIN)/,$(addsuffix .riscv,$(PROGRAMS)))
 DUMPS=$(addprefix $(DMP)/,$(addsuffix .dump,$(PROGRAMS)))
 
