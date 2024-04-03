@@ -1285,15 +1285,6 @@ module csr_regfile import ariane_pkg::*; #(
     end
     
     assign cycle_calls_o = cycle_calls;
-    
-    csr_ila my_csr_ila(
-        .clk(clk_i),
-        .probe0(csr_addr.address),
-        .probe1(csr_rdata),
-        .probe2(csr_read),
-        .probe3(cycle_calls),
-        .probe4(0)
-    );
 
     //-------------
     // Assertions
